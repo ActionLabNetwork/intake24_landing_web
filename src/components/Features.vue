@@ -1,30 +1,29 @@
 <template>
   <v-container fluid class="container">
-    <v-responsive class="px-4 mt-10">
+    <v-row class="d-flex justify-center">
       <p class="title mb-10 text-center">Why use Intake24?</p>
-
-      <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center">
-        <v-col :order="index % 2 === 0 ? 1 : 2">
-          <div class="d-flex flex-column align-center">
-            <div>
-              <p class="heading mb-3">{{ feature.title }}</p>
-              <p v-if="typeof feature.description === 'string'" class="subheading">{{ feature.description }}</p>
-              <ul v-else class="subheading">
-                <li v-for="(item, itemIdx) in feature.description" :key="itemIdx">{{ item }}</li>
-              </ul>
-              <v-btn v-if="feature.cta" variant="outlined" class="cta-btn rounded-pill mt-5 text-primary">
-              {{ feature.cta }}
-              </v-btn>
-            </div>
+    </v-row>
+    <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center">
+      <v-col :order-md="isEven(index) ? 1 : 2">
+        <div class="d-flex flex-column align-center">
+          <div>
+            <p class="heading mb-3">{{ feature.title }}</p>
+            <p v-if="typeof feature.description === 'string'" class="subheading">{{ feature.description }}</p>
+            <ul v-else class="subheading">
+              <li v-for="(item, itemIdx) in feature.description" :key="itemIdx">{{ item }}</li>
+            </ul>
+            <v-btn v-if="feature.cta" variant="outlined" class="cta-btn rounded-pill mt-5 text-primary">
+            {{ feature.cta }}
+            </v-btn>
           </div>
-        </v-col>
-        <v-col :order="index % 2 === 0 ? 2 : 1">
-          <div class="text-center">
-            <img width=400 :src="getImg(index)" alt="Feature image" />
-          </div>
-        </v-col>
-      </v-row>
-    </v-responsive>
+        </div>
+      </v-col>
+      <v-col :order-md="isEven(index) ? 2 : 1">
+        <div class="text-center">
+          <img width=400 :src="getImg(index)" alt="Feature image" />
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -33,6 +32,11 @@ import Section1 from '@/assets/section-1.svg'
 import Section2 from '@/assets/Section-2.svg'
 import Section3 from '@/assets/Section-3.svg'
 import Section4 from '@/assets/Section-4.svg'
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+
+const display = useDisplay()
+
+const isEven = (index: number) => index % 2 === 0
 
 const features = [{
   id: 1,
@@ -64,19 +68,23 @@ const getImg = (index: number) => {
 
 <style scoped>
 .title {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: bold;
 }
 
 .heading {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .subheading {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 100;
   inline-size: 330px;
+}
+
+img {
+  width: 260px;
 }
 
 button {
@@ -85,5 +93,27 @@ button {
 
 li {
   margin-left: 30px;
+}
+
+@media (min-width: 960px) {
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .heading {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .subheading {
+    font-size: 18px;
+    font-weight: 100;
+    inline-size: 330px;
+  }
+
+  img {
+    width: 400px;
+  }
 }
 </style>

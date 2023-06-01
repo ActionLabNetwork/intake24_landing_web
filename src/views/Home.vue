@@ -1,5 +1,5 @@
 <template>
-  <v-main class="container pa-5">
+  <v-main>
     <section>
       <Hero />
     </section>
@@ -43,10 +43,6 @@ import CTA from '@/components/CTA.vue';
 <style scoped>
 section:nth-child(even) {
   background-color: #f8f8f8;
-}
-
-.container {
-  padding: 0 280px;
 }
 
 section {

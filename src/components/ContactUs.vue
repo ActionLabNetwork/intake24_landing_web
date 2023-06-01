@@ -14,11 +14,20 @@
 
 <style scoped>
 .heading {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bolder;
 }
-
 .subheading {
-  inline-size: 500px;
+  font-size: 16px;
+}
+
+@media (min-width: 960px) {
+  .heading {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .subheading {
+    inline-size: 500px;
+  }
 }
 </style>

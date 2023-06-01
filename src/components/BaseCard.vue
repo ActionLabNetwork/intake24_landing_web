@@ -1,7 +1,7 @@
 <template>
   <v-card
+    min-width="320"
     class="card mx-auto rounded-xl"
-    min-width="350"
   >
     <v-card-title>
       <div class="d-flex py-5 px-3 align-center">
@@ -61,5 +61,37 @@ const items = [{ id: 1, text: 'Gestational Diabetes' }, { id: 2, text: 'Food ins
 
 .card {
   filter: drop-shadow(1px 16px 20px #E2D6D6);
+}
+
+@media (min-width: 960px) {
+  .card-title {
+    font-weight: bold
+  }
+
+  .custom-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .custom-list li {
+    margin-bottom: 20px;
+  }
+
+  .custom-list .tick {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #EE672D;
+    opacity: 0.5;
+    color: white;
+    margin-right: 10px;
+  }
+
+  .card {
+    filter: drop-shadow(1px 16px 20px #E2D6D6);
+  }
 }
 </style>

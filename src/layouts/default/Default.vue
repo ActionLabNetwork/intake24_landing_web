@@ -1,6 +1,6 @@
 <template>
   <v-layout class="d-flex flex-column">
-    <default-bar />
+    <!-- <default-bar /> -->
     <default-view />
     <footer-view />
   </v-layout>
