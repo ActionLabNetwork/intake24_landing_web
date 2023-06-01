@@ -1,8 +1,8 @@
 <template>
-  <v-layout class="layout d-flex flex-column">
+  <v-layout class="d-flex flex-column">
     <default-bar />
     <default-view />
-    <footer-view />
+    <footer-view class="layout" />
   </v-layout>
 </template>
 
@@ -18,5 +18,6 @@ import FooterView from './Footer.vue'
   }
   .layout {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 </style>

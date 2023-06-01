@@ -55,7 +55,7 @@ const features = [{
 
 <style scoped>
 .title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bolder;
 }
 .heading {
@@ -76,7 +76,7 @@ const features = [{
   color: white;
 }
 img {
-  width: 400px;
+  width: 300px;
 }
 
 @media only screen and (min-width: 960px) {

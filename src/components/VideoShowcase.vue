@@ -14,7 +14,7 @@
 
 <style scoped>
 .heading {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: bolder;
 }
 
@@ -26,15 +26,15 @@
 
 iframe {
   box-shadow: 12px 12px 2px 1px #EE672D;
-  width: 60%;
-  height: 240px;
+  width: 300px;
+  height: 168px;
 }
 
 @media (min-width: 960px) {
   iframe {
     box-shadow: 12px 12px 2px 1px #EE672D;
-    width: 60%;
-    height: 280px;
+    width: 533px;
+    height: 300px;
   }
 
   .subheading {
@@ -47,8 +47,8 @@ iframe {
 @media (min-width: 1280px) {
   iframe {
     box-shadow: 12px 12px 2px 1px #EE672D;
-    width: 60%;
-    height: 300px;
+    width: 600px;
+    height: 337.5px;
   }
 
   .subheading {

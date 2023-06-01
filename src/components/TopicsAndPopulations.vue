@@ -5,7 +5,7 @@
       <div class="d-flex flex-column align-center">
         <p class="subheading text-center mb-5">Used for examining diverse topics and populations</p>
         <div class="d-flex flex-column flex-md-row cards">
-          <BaseCard title="Topics" :listItems="topicsListItems" />
+          <BaseCard title="Topics" :listItems="topicsListItems" class="mb-5 mb-md-0" />
           <BaseCard title="Population" :listItems="populationListItems"/>
         </div>
       </div>

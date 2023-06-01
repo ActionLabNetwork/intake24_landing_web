@@ -24,7 +24,7 @@
 
 <style scoped>
 .heading {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bolder;
 }
 .spacer {
