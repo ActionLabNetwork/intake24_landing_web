@@ -1,12 +1,14 @@
 <template>
   <v-container fluid class="container">
-    <v-responsive class="px-4 mt-10">
+    <v-row class="d-flex justify-center">
       <div class="d-flex flex-column align-center text-center mb-10">
         <p class="heading mb-3">Here's what participants <br/> say about Intake24</p>
         <p class="subheading">Feedback from participants in the field test of Intake24 in those aged 11+ years (up to and including older adults) showed the majority of people found the system user-friendly, enjoyable to use and felt it accurately captured their dietary intake.</p>
       </div>
+    </v-row>
+    <v-row class="d-flex justify-center">
       <BaseCarousel />
-    </v-responsive>
+    </v-row>
   </v-container>
 </template>
 
@@ -16,7 +18,7 @@ import BaseCarousel from '@/components/BaseCarousel.vue'
 
 <style scoped>
 .heading {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bolder;
 }
 
@@ -25,11 +27,31 @@ import BaseCarousel from '@/components/BaseCarousel.vue'
 }
 
 .subheading {
-  inline-size: 500px;
-  font-size: 18px;
+  inline-size: 250px;
+  font-size: 16px;
 }
 
 .cards {
   gap: 50px;
+}
+
+@media (min-width: 960px) {
+  .heading {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .spacer {
+    height: 150px;
+  }
+
+  .subheading {
+    inline-size: 500px;
+    font-size: 18px;
+  }
+
+  .cards {
+    gap: 50px;
+  }
 }
 </style>

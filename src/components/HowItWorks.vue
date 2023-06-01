@@ -54,21 +54,15 @@ const features = [{
 </script>
 
 <style scoped>
-.wrapper {
-  background-color: #f7f7f7;
-}
-
 .title {
   font-size: 22px;
   font-weight: bolder;
 }
-
 .heading {
   font-size: 16px;
   font-weight: bold;
   inline-size: 350px;
 }
-
 .circle {
   width: 25px;
   height: 25px;
@@ -81,30 +75,23 @@ const features = [{
   font-weight: bold;
   color: white;
 }
-
 img {
-  width: 200px;
+  width: 400px;
 }
 
-@media (min-width: 960px) {
-  .wrapper {
-  background-color: #f7f7f7;
-}
-
+@media only screen and (min-width: 960px) {
   .title {
     font-size: 30px;
     font-weight: bolder;
   }
-
   .heading {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
     inline-size: 350px;
   }
-
   .circle {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-color: #EE672D;
     border-radius: 50%;
     display: flex;
@@ -115,7 +102,34 @@ img {
     color: white;
   }
   img {
-   width: 400px;
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .heading {
+    font-size: 26px;
+    font-weight: bold;
+    inline-size: 350px;
+  }
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: #EE672D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  img {
+    width: 600px;
   }
 }
 </style>

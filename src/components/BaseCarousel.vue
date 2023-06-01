@@ -1,30 +1,28 @@
 <template>
-  <v-carousel
+  <div>
+    <v-carousel
     cycle
     hide-delimiter-background
     show-arrows="hover"
     delimiter-icon="mdi-circle"
     color="primary"
-    background="#f8f8f8"
-  >
-    <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
     >
-      <v-sheet
-        height="100%"
+      <v-carousel-item
+        v-for="(slide, i) in slides"
+        :key="i"
       >
         <div class="carousel-bg d-flex justify-center align-center">
           <v-card flat class="mx-auto mt-10 py-3">
-            <img width=600 src="@/assets/testimonial-1.png" alt="Testimonial 1" />
+            <img src="@/assets/testimonial-1.png" alt="Testimonial 1" />
           </v-card>
         </div>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+      </v-carousel-item>
+    </v-carousel>
+  </div>
+
 </template>
 
-<script lang="ts">
+<script  lang="ts">
 export default {
   data() {
     return {
@@ -49,10 +47,22 @@ export default {
 
 <style scoped>
 .carousel-bg {
-  background: #f8f8f8;
+  background: #fff;
+  width: 600px;
 }
 
-.card {
-  border-radius: 20px;
+img {
+  width: 450px;
+}
+
+@media (min-width: 960px) {
+  .carousel-bg {
+    background: #fff;
+    width: 1000px;
+  }
+
+  img {
+    width: 600px;
+  }
 }
 </style>

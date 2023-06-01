@@ -95,7 +95,7 @@ li {
   margin-left: 30px;
 }
 
-@media (min-width: 960px) {
+@media only screen and (min-width: 960px) {
   .title {
     font-size: 30px;
     font-weight: bold;
@@ -114,6 +114,28 @@ li {
 
   img {
     width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .heading {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .subheading {
+    font-size: 18px;
+    font-weight: 100;
+    inline-size: 330px;
+  }
+
+  img {
+    width: 70%;
   }
 }
 </style>

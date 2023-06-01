@@ -6,7 +6,7 @@
           <p class="heading mb-3">Interested to use Intake24?</p>
           <p class="subheading">Get in touch with us to know more.</p>
         </div>
-        <v-btn class="text-primary rounded-pill">Contact Us</v-btn>
+        <v-btn class="cta-btn text-primary rounded-pill">Contact Us</v-btn>
       </div>
     </v-responsive>
   </v-container>
@@ -20,6 +20,10 @@
 .subheading {
   font-size: 16px;
 }
+.cta-btn {
+    height: 40px;
+    font-size: 18px;
+  }
 
 @media (min-width: 960px) {
   .heading {
@@ -27,7 +31,25 @@
     font-weight: bolder;
   }
   .subheading {
-    inline-size: 500px;
+    font-size: 20px;
+  }
+  .cta-btn {
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heading {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+  .cta-btn {
+    height: 50px;
+    font-size: 20px;
   }
 }
 </style>

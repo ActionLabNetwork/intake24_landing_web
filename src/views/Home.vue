@@ -1,24 +1,28 @@
 <template>
-  <v-main>
+  <v-app>
     <section>
       <Hero />
     </section>
     <section>
-      <VideoShowcase />
+      <VideoShowcase id="about" />
     </section>
     <section>
-      <Features />
+      <Features id="features" />
     </section>
     <section>
-      <HowItWorks />
+      <HowItWorks id="resources" />
     </section>
-    <section class="bg-primary">
+    <section class="bg-primary" id="contact">
       <ContactUs />
     </section>
     <section>
       <Impact />
     </section>
     <section>
+      <TopicsAndPopulations />
+    </section>
+    <section>
+      <CountriesFoodDatabases />
     </section>
     <section>
       <Testimonials />
@@ -26,7 +30,7 @@
     <section>
       <CTA />
     </section>
-  </v-main>
+  </v-app>
 </template>
 
 <script lang="ts" setup>
@@ -36,6 +40,8 @@ import Features from '@/components/Features.vue'
 import HowItWorks from '@/components/HowItWorks.vue';
 import ContactUs from '@/components/ContactUs.vue';
 import Impact from '@/components/Impact.vue'
+import TopicsAndPopulations from '@/components/TopicsAndPopulations.vue';
+import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue';
 import Testimonials from '@/components/Testimonials.vue';
 import CTA from '@/components/CTA.vue';
 </script>
