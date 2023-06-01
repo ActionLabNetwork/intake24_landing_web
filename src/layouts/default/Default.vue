@@ -1,15 +1,15 @@
 <template>
-  <v-app>
-    <v-main>
-      <default-bar />
-      <default-view />
-    </v-main>
-  </v-app>
+  <v-layout class="d-flex flex-column">
+    <default-bar />
+    <default-view />
+    <footer-view />
+  </v-layout>
 </template>
 
 <script lang="ts" setup>
 import DefaultBar from './AppBar.vue'
 import DefaultView from './View.vue'
+import FooterView from './Footer.vue'
 </script>
 
 <style scoped>

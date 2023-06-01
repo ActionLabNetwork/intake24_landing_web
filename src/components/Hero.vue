@@ -1,8 +1,8 @@
 <template>
   <v-container fluid class="container">
     <v-responsive class="px-4 mt-10">
-      <v-row>
-        <v-col>
+      <v-row no-gutters>
+        <v-col cols="12" md="6">
           <div>
             <div class="text-wrapper">
               <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator" />

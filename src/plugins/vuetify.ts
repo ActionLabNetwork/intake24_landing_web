@@ -13,13 +13,18 @@ import { createVuetify } from "vuetify";
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
+  defaults: {
+    VBtn: {
+      style: "text-transform: none;",
+    },
+  },
   theme: {
     themes: {
       light: {
         colors: {
-          primary: "#FA351E",
+          primary: "#EE672D",
           secondary: "#020202",
-          accent: "#FEE8E1",
+          accent: "#F8F8F8",
         },
       },
     },
