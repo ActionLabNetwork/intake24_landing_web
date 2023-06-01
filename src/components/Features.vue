@@ -29,12 +29,9 @@
 
 <script setup lang="ts">
 import Section1 from '@/assets/section-1.svg'
-import Section2 from '@/assets/Section-2.svg'
-import Section3 from '@/assets/Section-3.svg'
-import Section4 from '@/assets/Section-4.svg'
-import { useDisplay } from 'vuetify/lib/framework.mjs';
-
-const display = useDisplay()
+import Section2 from '@/assets/section-2.svg'
+import Section3 from '@/assets/section-3.svg'
+import Section4 from '@/assets/section-4.svg'
 
 const isEven = (index: number) => index % 2 === 0
 

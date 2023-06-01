@@ -8,12 +8,12 @@
     color="primary"
     >
       <v-carousel-item
-        v-for="(slide, i) in slides"
-        :key="i"
+        v-for="slide in slides"
+        :key="slide.id"
       >
         <div class="carousel-bg d-flex justify-center align-center">
           <v-card flat class="mx-auto mt-10 py-3">
-            <img src="@/assets/testimonial-1.png" alt="Testimonial 1" />
+            <img :src="slide.image" alt="Testimonials" />
           </v-card>
         </div>
       </v-carousel-item>
@@ -22,27 +22,11 @@
 
 </template>
 
-<script  lang="ts">
-export default {
-  data() {
-    return {
-      colors: [
-        'indigo',
-        'warning',
-        'pink darken-2',
-        'red lighten-1',
-        'deep-purple accent-4',
-      ],
-      slides: [
-        'First',
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth',
-      ],
-    }
-  },
-}
+<script setup lang="ts">
+import Testimonial1 from '@/assets/testimonial-1.png'
+import Testimonial2 from '@/assets/testimonial-2.png'
+
+const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }]
 </script>
 
 <style scoped>
