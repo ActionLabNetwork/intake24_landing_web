@@ -12,9 +12,11 @@
             <ul v-else class="subheading text-left">
               <li v-for="(item, itemIdx) in feature.description" :key="itemIdx">{{ item }}</li>
             </ul>
-            <v-btn v-if="feature.cta" variant="outlined" class="cta-btn rounded-pill mt-5 text-primary">
-            {{ feature.cta }}
-            </v-btn>
+            <div>
+              <v-btn v-if="feature.cta" variant="outlined" class="cta-btn rounded-pill mt-5 text-primary">
+                {{ feature.cta }}
+              </v-btn>
+            </div>
           </div>
         </div>
       </v-col>
@@ -121,7 +123,9 @@ li {
 }
 
 @media only screen and (min-width: 1280px) {
-  .cta-btn {}
+  .cta-btn {
+
+  }
 
   .title {
     font-size: 30px;
