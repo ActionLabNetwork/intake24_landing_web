@@ -6,6 +6,7 @@
     show-arrows="hover"
     delimiter-icon="mdi-circle"
     color="primary"
+    :height="display.mdAndUp.value ? 500 : 300"
     >
       <v-carousel-item
         v-for="slide in slides"
@@ -28,6 +29,9 @@
 import Testimonial1 from '@/assets/testimonial-1.svg'
 import Testimonial2 from '@/assets/testimonial-2.svg'
 import Testimonial3 from '@/assets/testimonial-3.svg'
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+
+const display = useDisplay()
 
 const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }, { id: 3, image: Testimonial3 }]
 </script>

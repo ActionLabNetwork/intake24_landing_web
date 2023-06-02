@@ -24,6 +24,9 @@
     <section>
       <CTA />
     </section>
+    <footer class="footer">
+      <Footer />
+    </footer>
   </v-app>
 </template>
 
@@ -34,13 +37,17 @@ import Features from '@/components/Features.vue'
 import HowItWorks from '@/components/HowItWorks.vue';
 import ContactUs from '@/components/ContactUs.vue';
 import Impact from '@/components/Impact.vue'
-import TopicsAndPopulations from '@/components/TopicsAndPopulations.vue';
-import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue';
 import Testimonials from '@/components/Testimonials.vue';
 import CTA from '@/components/CTA.vue';
+import Footer from '@/components/Footer.vue';
 </script>
 
 <style scoped>
+.footer {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 section:nth-child(even) {
   background-color: #f8f8f8;
 }
