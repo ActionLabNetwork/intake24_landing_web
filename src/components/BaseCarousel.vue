@@ -6,7 +6,7 @@
     show-arrows="hover"
     delimiter-icon="mdi-circle"
     color="primary"
-    :height="display.mdAndUp.value ? 500 : 300"
+    :height="display.mdAndUp.value ? 500 : 330"
     >
       <v-carousel-item
         v-for="slide in slides"
@@ -46,7 +46,7 @@ const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }, 
 }
 
 img {
-  width: 300px;
+  width: 350px;
 }
 
 @media (min-width: 960px) {

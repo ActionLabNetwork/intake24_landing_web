@@ -82,7 +82,6 @@ const getImg = (index: number) => {
 
 .subheading {
   font-size: 14px;
-  font-weight: 100;
   inline-size: 330px;
 }
 
