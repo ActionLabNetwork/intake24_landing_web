@@ -6,10 +6,10 @@
     <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center mb-10">
       <v-col :order-md="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
-          <div>
+          <div class="d-flex flex-column text-center text-md-start">
             <p class="heading mb-3">{{ feature.title }}</p>
             <p v-if="typeof feature.description === 'string'" class="subheading">{{ feature.description }}</p>
-            <ul v-else class="subheading">
+            <ul v-else class="subheading text-left">
               <li v-for="(item, itemIdx) in feature.description" :key="itemIdx">{{ item }}</li>
             </ul>
             <v-btn v-if="feature.cta" variant="outlined" class="cta-btn rounded-pill mt-5 text-primary">
@@ -66,6 +66,10 @@ const getImg = (index: number) => {
 </script>
 
 <style scoped>
+.cta-btn {
+  margin: 0 auto;
+}
+
 .title {
   font-size: 26px;
   font-weight: bold;
@@ -95,6 +99,8 @@ li {
 }
 
 @media only screen and (min-width: 960px) {
+  .cta-btn {}
+
   .title {
     font-size: 30px;
     font-weight: bold;
@@ -107,7 +113,6 @@ li {
 
   .subheading {
     font-size: 18px;
-    font-weight: 100;
     inline-size: 330px;
   }
 
@@ -117,6 +122,8 @@ li {
 }
 
 @media only screen and (min-width: 1280px) {
+  .cta-btn {}
+
   .title {
     font-size: 30px;
     font-weight: bold;
@@ -129,7 +136,6 @@ li {
 
   .subheading {
     font-size: 18px;
-    font-weight: 100;
     inline-size: 330px;
   }
 
