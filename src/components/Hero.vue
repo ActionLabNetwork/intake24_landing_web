@@ -7,10 +7,10 @@
           <div class="text-wrapper">
             <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator" />
             <h1 class="heading text-md-h2">
-              Easily Track <br/> Your Everyday <br /> Food Intake
+              Easy way to <br/> measure what <br /> people eat
             </h1>
             <h2 class="subheading">
-              Intake24 is an open-source self-completed computerised dietary recall system based on multiple-pass 24-hour recall.
+              Intake24 is an open-source self-completed computerised dietary recall system based on the multiple-pass 24-hour recall.
             </h2>
           </div>
           <v-btn variant="outlined" class="cta-btn rounded-pill mt-5 bg-primary" href="https://survey.intake24.dev/demo/generate-user" target="_blank">

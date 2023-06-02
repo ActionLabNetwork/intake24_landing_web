@@ -3,7 +3,7 @@
     <v-row class="d-flex justify-center">
       <p class="title mb-10 text-center">Why use Intake24?</p>
     </v-row>
-    <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center">
+    <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center mb-10">
       <v-col :order-md="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
           <div>

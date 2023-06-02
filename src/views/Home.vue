@@ -50,9 +50,12 @@ import CTA from '@/components/CTA.vue';
 section:nth-child(even) {
   background-color: #f8f8f8;
 }
+section:nth-child(7) {
+  background-color: #f8f8f8;
+}
 
 section {
-  padding-top: 25px;
+  padding-top: 80px;
   padding-bottom: 70px;
 }
 </style>

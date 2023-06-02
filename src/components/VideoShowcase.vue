@@ -4,7 +4,7 @@
       <p class="heading pt-10 pb-3 mx-auto">What is Intake24?</p>
     </v-row>
     <v-row>
-      <p class="subheading mx-auto mb-8">Donec quam felis ultricies nec pellentesque eu pretium quis. sem. Nulla consequat massa quis enim.</p>
+      <p class="subheading mx-auto mb-8 text-center">Intake24 is an online 24hr dietary recall for collection of nutrient intake data which is provided for the research community free of charge. Designed to be quick and easy to complete users can access the system on mobile phones, tablets or computer.</p>
     </v-row>
     <v-row>
       <iframe src="https://www.youtube.com/embed/iEt4MDngSkA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="mx-auto rounded-xl" allowfullscreen></iframe>

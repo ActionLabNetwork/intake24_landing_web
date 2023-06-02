@@ -9,7 +9,7 @@
           </v-btn>
         </div>
         <div>
-          <img src="@/assets/cta-2-image.png" alt="CTA Image" />
+          <img src="@/assets/cta-2-image.svg" alt="CTA Image" />
         </div>
       </div>
     </v-row>

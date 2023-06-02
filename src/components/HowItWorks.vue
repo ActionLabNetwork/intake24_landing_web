@@ -22,11 +22,11 @@
 </template>
 
 <script setup lang="ts">
-import Step1 from '@/assets/step-1.png'
-import Step2 from '@/assets/step-2.png'
-import Step3 from '@/assets/step-3.png'
-import Step4 from '@/assets/step-4.png'
-import Step5 from '@/assets/step-5.png'
+import Step1 from '@/assets/step-1.svg'
+import Step2 from '@/assets/step-2.svg'
+import Step3 from '@/assets/step-3.svg'
+import Step4 from '@/assets/step-4.svg'
+import Step5 from '@/assets/step-5.svg'
 
 const isEven = (index: number) => index % 2 === 0
 
@@ -129,7 +129,7 @@ img {
     color: white;
   }
   img {
-    width: 600px;
+    width: 500px;
   }
 }
 </style>

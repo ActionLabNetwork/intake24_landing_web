@@ -23,10 +23,11 @@
 </template>
 
 <script setup lang="ts">
-import Testimonial1 from '@/assets/testimonial-1.png'
-import Testimonial2 from '@/assets/testimonial-2.png'
+import Testimonial1 from '@/assets/testimonial-1.svg'
+import Testimonial2 from '@/assets/testimonial-2.svg'
+import Testimonial3 from '@/assets/testimonial-3.svg'
 
-const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }]
+const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }, { id: 3, image: Testimonial3 }]
 </script>
 
 <style scoped>

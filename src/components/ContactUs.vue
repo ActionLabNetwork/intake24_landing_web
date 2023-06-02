@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="container">
     <v-responsive class="px-4 mt-10">
-      <div class="d-flex flex-column align-center">
+      <div class="d-flex flex-column align-center pb-2">
         <div class="text-center mb-5">
           <p class="heading mb-3">Interested to use Intake24?</p>
           <p class="subheading">Get in touch with us to know more.</p>

@@ -9,7 +9,7 @@
     </v-row>
 
     <v-row class="d-flex justify-center">
-      <img src="@/assets/intake-impacts-logo.png" alt="Intake24's Impact Logo"/>
+      <img src="@/assets/intake-impacts-logos.svg" alt="Intake24's Impact Logo"/>
     </v-row>
     <!-- Spacer -->
     <v-row class="d-flex justify-center">

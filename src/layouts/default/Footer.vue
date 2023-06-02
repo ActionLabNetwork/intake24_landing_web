@@ -66,10 +66,7 @@
 export default {
   data: () => ({
     icons: [
-      'mdi-facebook',
-      'mdi-instagram',
       'mdi-twitter',
-      'mdi-youtube',
     ],
   }),
 }

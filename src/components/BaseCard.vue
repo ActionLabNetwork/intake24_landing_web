@@ -1,11 +1,11 @@
 <template>
   <v-card
-    min-width="320"
-    class="card mx-auto rounded-xl"
+  :min-width="display.mdAndUp ? '350' : '200'"
+  class="card mx-auto rounded-xl"
   >
     <v-card-title>
       <div class="d-flex py-5 px-3 align-center">
-        <img src="@/assets/topics-icon.png" width=50 alt="Card Icon" class="mr-3" />
+        <img :src="props.icon" width=50 alt="Card Icon" class="mr-3" />
         <p class="card-title">{{ props.title }}</p>
       </div>
     </v-card-title>
@@ -13,7 +13,12 @@
       <v-list class="custom-list">
         <v-list-item v-for="item in props.listItems" :key="item.id">
           <v-list-item-content>
-            <v-list-item-title><span class="tick">✓</span>{{ item.text }}</v-list-item-title>
+            <v-list-item-title>
+              <span class="mr-2">
+                <img src="@/assets/checkmark.svg" alt="" />
+              </span>
+              {{ item.text }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -23,13 +28,15 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue';
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+
+const display = useDisplay();
 
 const props = defineProps({
   title: { type: String, required: true },
-  listItems: { type: Array as PropType<{ id: number, text: string }[]>, required: true }
+  listItems: { type: Array as PropType<{ id: number, text: string}[]>, required: true },
+  icon: String
 })
-
-const items = [{ id: 1, text: 'Gestational Diabetes' }, { id: 2, text: 'Food insecurity sarcopenia' }, { id: 3, text: 'Mindful eating' }, { id: 4, text: 'Treatment of type II diabetes' }, { id: 5, text: 'School food standards' }, { id: 6, text: 'Weight-loss maintenance' }]
 </script>
 
 <style scoped>
@@ -60,7 +67,10 @@ const items = [{ id: 1, text: 'Gestational Diabetes' }, { id: 2, text: 'Food ins
 }
 
 .card {
-  filter: drop-shadow(1px 16px 20px #E2D6D6);
+  box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
+  -webkit-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
+  -moz-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
+  width: "220px";
 }
 
 @media (min-width: 960px) {
@@ -77,21 +87,11 @@ const items = [{ id: 1, text: 'Gestational Diabetes' }, { id: 2, text: 'Food ins
     margin-bottom: 20px;
   }
 
-  .custom-list .tick {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #EE672D;
-    opacity: 0.5;
-    color: white;
-    margin-right: 10px;
-  }
-
   .card {
-    filter: drop-shadow(1px 16px 20px #E2D6D6);
+    box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
+    -webkit-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
+    -moz-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
+    min-width: "350px"
   }
 }
 </style>
