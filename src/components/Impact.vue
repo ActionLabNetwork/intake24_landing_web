@@ -9,7 +9,9 @@
     </v-row>
 
     <v-row class="d-flex justify-center">
-      <img src="@/assets/intake-impacts-logos.svg" alt="Intake24's Impact Logo"/>
+      <figure>
+        <img src="@/assets/intake-impacts-logos.svg" alt="Intake24's Impact Logo"/>
+      </figure>
     </v-row>
     <!-- Spacer -->
     <v-row class="d-flex justify-center">
@@ -19,8 +21,15 @@
         <div></div>
       </div>
     </v-row>
+    <TopicsAndPopulations />
+    <CountriesFoodDatabases />
   </v-container>
 </template>
+
+<script setup lang="ts">
+import TopicsAndPopulations from '@/components/TopicsAndPopulations.vue'
+import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue'
+</script>
 
 <style scoped>
 .heading {
@@ -33,7 +42,7 @@
 .subheading {
   inline-size: 250px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }
 .cards {
   gap: 50px;

@@ -20,7 +20,9 @@
       </v-col>
       <v-col :order-md="isEven(index) ? 2 : 1">
         <div class="text-center">
-          <img width=400 :src="getImg(index)" alt="Feature image" />
+          <figure>
+            <img width=400 :src="getImg(index)" alt="Feature image" />
+          </figure>
         </div>
       </v-col>
     </v-row>
@@ -70,7 +72,7 @@ const getImg = (index: number) => {
 }
 
 .heading {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 

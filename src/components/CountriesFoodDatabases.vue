@@ -11,7 +11,7 @@
 .subheading {
   inline-size: 250px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }
 img {
   width: 300px;

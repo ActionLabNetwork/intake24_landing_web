@@ -19,7 +19,7 @@
 }
 
 .subheading {
-  font-size: 20px;
+  font-size: 14px;
   inline-size: 300px;
   overflow-wrap: break-word
 }

@@ -5,7 +5,9 @@
   >
     <v-card-title>
       <div class="d-flex py-5 px-3 align-center">
-        <img :src="props.icon" width=50 alt="Card Icon" class="mr-3" />
+        <figure>
+          <img :src="props.icon" width=50 alt="Card Icon" class="mr-3" />
+        </figure>
         <p class="card-title">{{ props.title }}</p>
       </div>
     </v-card-title>
@@ -15,7 +17,9 @@
           <v-list-item-content>
             <v-list-item-title>
               <span class="mr-2">
-                <img src="@/assets/checkmark.svg" alt="" />
+                <figure>
+                  <img src="@/assets/checkmark.svg" alt="" />
+                </figure>
               </span>
               {{ item.text }}
             </v-list-item-title>

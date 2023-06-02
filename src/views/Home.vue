@@ -3,26 +3,20 @@
     <section>
       <Hero />
     </section>
-    <section>
-      <VideoShowcase id="about" />
+    <section id="about">
+      <VideoShowcase  />
     </section>
-    <section>
-      <Features id="features" />
+    <section id="features">
+      <Features />
     </section>
-    <section>
-      <HowItWorks id="resources" />
+    <section id="resources">
+      <HowItWorks  />
     </section>
     <section class="bg-primary" id="contact">
       <ContactUs />
     </section>
     <section>
       <Impact />
-    </section>
-    <section>
-      <TopicsAndPopulations />
-    </section>
-    <section>
-      <CountriesFoodDatabases />
     </section>
     <section>
       <Testimonials />
@@ -50,12 +44,15 @@ import CTA from '@/components/CTA.vue';
 section:nth-child(even) {
   background-color: #f8f8f8;
 }
-section:nth-child(7) {
-  background-color: #f8f8f8;
-}
 
 section {
   padding-top: 80px;
   padding-bottom: 70px;
+}
+</style>
+
+<style>
+html {
+  scroll-behavior: smooth;
 }
 </style>

@@ -5,7 +5,9 @@
       <v-col cols="12" md="5" lg="4" offset="1" class="mb-10">
         <div>
           <div class="text-wrapper">
-            <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator" />
+            <figure>
+              <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator" />
+            </figure>
             <h1 class="heading text-md-h2">
               Easy way to <br/> measure what <br /> people eat
             </h1>
@@ -21,7 +23,9 @@
       <!-- Hero Image -->
       <v-col cols="12" md="6" class="mx-md-auto">
         <div class="hero-image mx-auto">
-          <img src="@/assets/hero.svg" alt="Hero image" />
+          <figure>
+            <img src="@/assets/hero.svg" alt="Hero image" />
+          </figure>
         </div>
       </v-col>
     </v-row>

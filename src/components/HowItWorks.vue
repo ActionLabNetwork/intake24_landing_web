@@ -14,7 +14,9 @@
       </v-col>
       <v-col :order-md="isEven(index) ? 2 : 1">
         <div class="text-center">
-          <img width=400 :src="feature.image" alt="Product image" />
+          <figure>
+            <img width=400 :src="feature.image" alt="Product image" />
+          </figure>
         </div>
       </v-col>
     </v-row>
@@ -59,7 +61,7 @@ const features = [{
   font-weight: bolder;
 }
 .heading {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   inline-size: 350px;
 }
