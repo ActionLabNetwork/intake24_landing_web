@@ -36,19 +36,19 @@ const features = [{
   image: Step1,
 }, {
   id: 2,
-  title: 'Add the food and drinks you consumed.',
+  title: 'Add the food and drinks consumed.',
   image: Step2,
 }, {
   id: 3,
-  title: 'Select the amount of food and drinks you had through visual prompts and custom portion size estimations.',
+  title: 'Select the amount of food and drinks through visual prompts and custom portion size estimations.',
   image: Step3,
 }, {
   id: 4,
-  title: 'Give additional details e.g., supplements, who you eat with, etc.',
+  title: 'Collect additional details using custom questions e.g. who they ate with, where the food was purchased etc.',
   image: Step4,
 }, {
   id: 5,
-  title: 'Review, submit your recall, and get optional feedback.',
+  title: 'After a final review of the data there is the option to offer personalised dietary feedback.',
   image: Step5,
 }]
 </script>

@@ -39,7 +39,7 @@ const features = [{
   id: 1,
   title: 'As accurate as face-to-face recall',
   image: Section1,
-  description: 'With comparable accuracy to a traditional face-to-face dietary recall interview but without the need to travel to visit the participants. Intake24 offers a convenient and low-cose alternative to collecting dietary data on a large scale.',
+  description: 'With comparable accuracy to a traditional face-to-face dietary recall interview, Intake24 offers a convenient, user-friendly, and low-cost alternative to collecting dietary data on a large scale.',
   cta: 'Learn more'
 }, {
   id: 2,
@@ -50,7 +50,7 @@ const features = [{
   id: 3,
   title: 'Estimation made easy',
   image: Section3,
-  description: 'The tool provides food and drink photographs to estimate the amount of food or drink consumed',
+  description: 'The tool includes validated food and drink photographs to estimate the amount of food or drink consumed',
 }, {
   id: 4,
   title: 'Built with brains',

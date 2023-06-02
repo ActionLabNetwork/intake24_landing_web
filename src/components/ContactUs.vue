@@ -4,7 +4,7 @@
       <div class="d-flex flex-column align-center pb-2">
         <div class="text-center mb-5">
           <p class="heading mb-3">Interested to use Intake24?</p>
-          <p class="subheading">Get in touch with us to know more.</p>
+          <p class="subheading">Get in touch with us to find out more.</p>
         </div>
         <v-btn class="cta-btn text-primary rounded-pill">Contact Us</v-btn>
       </div>
