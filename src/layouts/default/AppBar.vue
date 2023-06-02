@@ -76,12 +76,9 @@ const navOptions = [
 .logo {
   height: 2em;
 }
+
 .navbar {
   gap: 10px;
-}
-
-btn {
-  text-transform: unset
 }
 </style>
 

@@ -6,7 +6,7 @@
     <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center">
       <v-col :order-md="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
-          <div>
+          <div class="d-flex flex-column align-center align-md-start text-center text-md-left">
             <div class="circle mb-3">{{ feature.id }}</div>
             <p class="heading">{{ feature.title }}</p>
           </div>

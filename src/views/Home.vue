@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <section>
+    <section class="pa-0">
       <Hero />
     </section>
     <section id="about">
@@ -46,8 +46,23 @@ section:nth-child(even) {
 }
 
 section {
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 70px;
+}
+
+@media only screen and (min-width: 960px) {
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  section:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+
+  section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
 }
 </style>
 

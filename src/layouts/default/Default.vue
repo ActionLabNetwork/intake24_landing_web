@@ -13,11 +13,12 @@ import FooterView from './Footer.vue'
 </script>
 
 <style scoped>
-  .d-flex {
-    row-gap: 10em;
-  }
-  .layout {
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+.d-flex {
+  row-gap: 10em;
+}
+
+.layout {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 </style>

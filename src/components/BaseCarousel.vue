@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <v-carousel
     cycle
     hide-delimiter-background
@@ -12,7 +12,7 @@
         :key="slide.id"
       >
         <div class="carousel-bg d-flex justify-center align-center">
-          <v-card flat class="mx-auto mt-10 py-3">
+          <v-card flat class="card mx-auto mt-10 py-3 w-100 text-center">
             <figure>
               <img :src="slide.image" alt="Testimonials" />
             </figure>
@@ -33,13 +33,16 @@ const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }, 
 </script>
 
 <style scoped>
+.card {
+  background: #f8f8f8;
+}
 .carousel-bg {
   background: #fff;
   width: 600px;
 }
 
 img {
-  width: 450px;
+  width: 300px;
 }
 
 @media (min-width: 960px) {

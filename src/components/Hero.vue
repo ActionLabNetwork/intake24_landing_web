@@ -1,8 +1,8 @@
 <template>
-  <v-container fluid>
-    <v-row no-gutters>
+  <v-container fluid class="pt-md-15">
+    <v-row no-gutters class="d-flex align-center">
       <!-- Text -->
-      <v-col cols="12" md="5" lg="4" offset="1" class="mb-10">
+      <v-col cols="12" md="5" lg="4" offset="0" offset-md="1" class="mb-10 text-center text-md-left">
         <div>
           <div class="text-wrapper">
             <figure>
@@ -45,7 +45,7 @@
   padding-top: 20px;
 }
 .hero-image {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
 }
 .heading {
@@ -55,14 +55,15 @@
 }
 .heading-decorator {
   position: absolute;
-  top: 12px;
-  left: -12px;
+  top: 30px;
+  left: 70px;
   width: 12px;
 }
 .subheading {
   font-size: 14px;
   font-weight: 500;
   inline-size: 240px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
