@@ -17,9 +17,7 @@
           <v-list-item-content>
             <v-list-item-title>
               <span class="mr-2">
-                <figure>
-                  <img src="@/assets/checkmark.svg" alt="" />
-                </figure>
+                <img src="@/assets/checkmark.svg" alt="" />
               </span>
               {{ item.text }}
             </v-list-item-title>
