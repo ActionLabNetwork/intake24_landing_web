@@ -40,6 +40,7 @@
           v-for="option in navOptions"
           :key="option.id"
           :title="option.name"
+          :href="option.link"
           @click="drawer = !drawer"
         />
       </v-list>

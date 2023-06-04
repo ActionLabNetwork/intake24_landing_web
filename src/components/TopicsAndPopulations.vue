@@ -1,21 +1,13 @@
 <template>
   <v-container fluid>
     <!-- Topics and populations cards -->
-    <v-row class="d-flex justify-center">
+    <v-row class="justify-center">
       <div class="d-flex flex-column align-center">
         <p class="subheading text-center mb-5">Used for examining diverse topics and populations</p>
         <div class="d-flex flex-column flex-md-row cards">
-          <BaseCard title="Topics" :listItems="topicsListItems" :icon="TopicsIcon" class="mb-5 mb-md-0" />
+          <BaseCard title="Topics" :listItems="topicsListItems" :icon="TopicsIcon" />
           <BaseCard title="Population" :listItems="populationListItems" :icon="PopulationIcon"/>
         </div>
-      </div>
-    </v-row>
-    <!-- Spacer -->
-    <v-row class="d-flex justify-center">
-      <div class="spacer d-flex justify-space-between ma-10">
-        <div></div>
-        <v-divider vertical></v-divider>
-        <div></div>
       </div>
     </v-row>
   </v-container>
@@ -32,27 +24,13 @@ const populationListItems = [{ id: 1, text: 'Children' }, { id: 2, text: 'Older 
 </script>
 
 <style scoped>
-img {
-  width: 300px;
+.subheading {
+  inline-size: 60vw;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-@media (min-width: 960px) {
-  .spacer {
-    height: 200px;
-  }
-
-  .subheading {
-    inline-size: 500px;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  .cards {
-    gap: 50px;
-  }
-
-  img {
-    width: 700px;
-  }
+.cards {
+  gap: 50px;
 }
 </style>

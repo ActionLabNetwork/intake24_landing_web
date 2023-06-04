@@ -7,7 +7,7 @@
           <div class="text-wrapper">
             <div class="heading-container">
               <figure>
-                <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator border" />
+                <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator" />
               </figure>
               <h1 class="heading">
                 Easy way to <br/> measure what <br /> people eat
@@ -24,21 +24,15 @@
       </v-col>
       <!-- Hero Image -->
       <v-col cols="12" md="6" class="mx-md-auto">
-        <div class="hero-image mx-auto">
-          <figure>
-            <img src="@/assets/hero.svg" alt="Hero image" />
-          </figure>
-        </div>
+        <figure class="hero-image mx-auto">
+          <img src="@/assets/hero.svg" alt="Hero image" />
+        </figure>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <style scoped>
-.main-wrapper {
-  margin-top: 20px;
-}
-
 .heading-container {
   position: relative;
 }
@@ -63,10 +57,6 @@
   line-height: 1;
 }
 
-.heading-container {
-  position: relative;
-}
-
 .heading-decorator {
   position: absolute;
   top: -10px;
@@ -85,25 +75,14 @@
 @media only screen and (min-width: 600px) {
   .heading {
     font-size: 38px;
-    font-weight: bold;
-    line-height: 1.1em;
-  }
-
-  .heading-container {
-    position: relative;
   }
 
   .heading-decorator {
-    position: absolute;
-    top: -10px;
-    left: 50%;
     transform: translateX(-130px);
-    width: 20px;
   }
 
   .subheading {
     font-size: 20px;
-    font-weight: 500;
     width: 550px;
   }
 
@@ -120,25 +99,14 @@
 @media only screen and (min-width: 960px) {
   .heading {
     font-size: 42px;
-    font-weight: bold;
-    line-height: 1.1em;
   }
-
-  .heading-container {
-    position: relative;
-  }
-
   .heading-decorator {
-    position: absolute;
-    top: -10px;
     left: 25%;
     transform: translateX(-130px);
-    width: 20px;
   }
 
   .subheading {
     font-size: 20px;
-    font-weight: 500;
   }
 
   .hero-image {
@@ -154,25 +122,10 @@
 @media only screen and (min-width: 1280px) {
   .heading {
     font-size: 56px;
-    font-weight: bold;
-    line-height: 1.1em;
-  }
-
-  .heading-container {
-    position: relative;
-  }
-
-  .heading-decorator {
-    position: absolute;
-    top: -10px;
-    left: 25%;
-    transform: translateX(-130px);
-    width: 20px;
   }
 
   .subheading {
     font-size: 20px;
-    font-weight: 500;
   }
 
   .hero-image {

@@ -1,20 +1,20 @@
 <template>
   <v-container fluid class="container">
     <!-- Impact and studies logo -->
-    <v-row class="d-flex justify-center">
-      <div class="text-center mb-5">
+    <v-row class="justify-center">
+      <article class="text-center mb-5">
         <p class="heading mb-10">Intake24's impact</p>
         <p class="subheading">Used in a range of studies across different countries from undergraduate studies to government national surveys:</p>
-      </div>
+      </article>
     </v-row>
 
-    <v-row class="d-flex justify-center">
+    <v-row class="justify-center text-center">
       <figure>
         <img src="@/assets/intake-impacts-logos.svg" alt="Intake24's Impact Logo" loading="lazy"/>
       </figure>
     </v-row>
     <!-- Spacer -->
-    <v-row class="d-flex justify-center">
+    <v-row class="justify-center">
       <div class="spacer d-flex justify-space-between my-10">
         <div></div>
         <v-divider vertical></v-divider>
@@ -36,38 +36,37 @@ import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue'
   font-size: 24px;
   font-weight: bolder;
 }
+
 .spacer {
   height: 150px;
 }
+
 .subheading {
-  inline-size: 250px;
+  inline-size: 75vw;
   font-weight: bold;
   font-size: 16px;
 }
+
 .cards {
   gap: 50px;
 }
+
 img {
-  width: 300px;
+  width: 70%;
 }
+
 @media (min-width: 960px) {
   .heading {
     font-size: 30px;
-    font-weight: bolder;
   }
+
   .spacer {
     height: 200px;
   }
+
   .subheading {
-    inline-size: 500px;
-    font-weight: bold;
+    inline-size: 50vw;
     font-size: 20px;
   }
-  .cards {
-    gap: 50px;
-  }
-  img {
-  width: 700px;
-}
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="ma-0 pa-0">
-    <v-row v-if="mdAndUp" class="bg-primary d-flex flex-column flex-lg-row justify-center">
+    <v-row v-if="mdAndUp" class="bg-primary flex-column flex-lg-row justify-center">
       <v-col cols="12" md="4" offset-md="1">
         <!-- Logo -->
         <div class="d-flex align-items-center pa-5">

@@ -1,6 +1,5 @@
 <template>
   <v-card
-  :min-width="display.mdAndUp ? '350' : '200'"
   class="card mx-auto rounded-xl"
   >
     <v-card-title>
@@ -16,10 +15,12 @@
         <v-list-item v-for="item in props.listItems" :key="item.id">
           <v-list-item-content>
             <v-list-item-title>
-              <span class="mr-2">
-                <img src="@/assets/checkmark.svg" alt="" loading="lazy" />
-              </span>
-              {{ item.text }}
+              <p>
+                <span class="mr-2">
+                  <img src="@/assets/checkmark.svg" alt="" loading="lazy" />
+                </span>
+                <span class="card-text">{{ item.text }}</span>
+              </p>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -36,7 +37,7 @@ const display = useDisplay();
 
 const props = defineProps({
   title: { type: String, required: true },
-  listItems: { type: Array as PropType<{ id: number, text: string}[]>, required: true },
+  listItems: { type: Array as PropType<{ id: number, text: string }[]>, required: true },
   icon: String
 })
 </script>
@@ -51,49 +52,32 @@ const props = defineProps({
   padding: 0;
 }
 
-.custom-list li {
-  margin-bottom: 20px;
-}
-
-.custom-list .tick {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: #EE672D;
-  opacity: 0.5;
-  color: white;
-  margin-right: 10px;
+.card-text {
+  font-size: clamp(0.75em, 1.75vw, 1em);
 }
 
 .card {
   box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
   -webkit-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
   -moz-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
-  width: "220px";
+  width: 80vw;
 }
 
-@media (min-width: 960px) {
-  .card-title {
-    font-weight: bold
-  }
-
-  .custom-list {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .custom-list li {
-    margin-bottom: 20px;
-  }
-
+@media only screen and (min-width: 600px) {
   .card {
-    box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
-    -webkit-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
-    -moz-box-shadow: 5px 5px 15px 7px rgba(235, 222, 222, 0.71);
-    min-width: "350px"
+    width: 65vw;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .card {
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .card {
+    width: 30vw;
   }
 }
 </style>

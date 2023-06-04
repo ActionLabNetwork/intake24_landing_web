@@ -1,12 +1,13 @@
 <template>
   <v-container fluid class="container">
-    <v-row class="d-flex justify-center">
-      <p class="title mb-10 text-center">Why use Intake24?</p>
+    <v-row>
+      <p class="title mb-10 text-center mx-auto">Why use Intake24?</p>
     </v-row>
-    <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center mb-10">
-      <v-col :order-md="isEven(index) ? 1 : 2">
+    <v-row v-for="(feature, index) in features" :key="feature.id" class="d-flex flex-column flex-sm-row align-center mb-10">
+      <!-- Description -->
+      <v-col :order-sm="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
-          <div class="d-flex flex-column text-center text-md-start">
+          <div class="d-flex flex-column text-center text-sm-start">
             <p class="heading mb-3">{{ feature.title }}</p>
             <p v-if="typeof feature.description === 'string'" class="subheading">{{ feature.description }}</p>
             <ul v-else class="subheading text-left">
@@ -20,10 +21,11 @@
           </div>
         </div>
       </v-col>
-      <v-col :order-md="isEven(index) ? 2 : 1">
+      <!-- Image -->
+      <v-col :order-sm="isEven(index) ? 2 : 1">
         <div class="text-center">
           <figure>
-            <img width=400 :src="getImg(index)" alt="Feature image" loading="lazy" />
+            <img :src="getImg(index)" alt="Feature image" loading="lazy" />
           </figure>
         </div>
       </v-col>
@@ -88,7 +90,7 @@ const getImg = (index: number) => {
 }
 
 img {
-  width: 260px;
+  width: 60%;
 }
 
 button {
@@ -100,8 +102,6 @@ li {
 }
 
 @media only screen and (min-width: 960px) {
-  .cta-btn {}
-
   .title {
     font-size: 30px;
     font-weight: bold;
@@ -116,17 +116,9 @@ li {
     font-size: 18px;
     inline-size: 330px;
   }
-
-  img {
-    width: 400px;
-  }
 }
 
 @media only screen and (min-width: 1280px) {
-  .cta-btn {
-
-  }
-
   .title {
     font-size: 30px;
     font-weight: bold;
@@ -140,10 +132,6 @@ li {
   .subheading {
     font-size: 18px;
     inline-size: 330px;
-  }
-
-  img {
-    width: 70%;
   }
 }
 </style>

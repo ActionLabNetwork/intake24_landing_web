@@ -1,21 +1,21 @@
 <template>
   <v-container fluid class="container">
-    <v-row class="d-flex justify-center">
-      <p class="title mb-10 text-center">Here's how it works</p>
+    <v-row>
+      <p class="title mb-10 mx-auto">Here's how it works</p>
     </v-row>
-    <v-row v-for="(feature, index) in features" :key="feature.id" class="mx-auto align-center justify-center">
-      <v-col :order-md="isEven(index) ? 1 : 2">
+    <v-row v-for="(feature, index) in features" :key="feature.id" class="flex-column flex-sm-row mx-auto align-center">
+      <v-col :order-sm="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
-          <div class="d-flex flex-column align-center align-md-start text-center text-md-left">
+          <div class="d-flex flex-column align-center align-sm-start text-center text-sm-left">
             <div class="circle mb-3">{{ feature.id }}</div>
             <p class="heading">{{ feature.title }}</p>
           </div>
         </div>
       </v-col>
-      <v-col :order-md="isEven(index) ? 2 : 1">
+      <v-col :order-sm="isEven(index) ? 2 : 1">
         <div class="text-center">
           <figure>
-            <img width=400 :src="feature.image" alt="Product image" loading="lazy" />
+            <img :src="feature.image" alt="Product image" loading="lazy" />
           </figure>
         </div>
       </v-col>
@@ -78,13 +78,12 @@ const features = [{
   color: white;
 }
 img {
-  width: 300px;
+  width: 70%;
 }
 
 @media only screen and (min-width: 960px) {
   .title {
     font-size: 30px;
-    font-weight: bolder;
   }
   .heading {
     font-size: 25px;
@@ -103,35 +102,18 @@ img {
     font-weight: bold;
     color: white;
   }
-  img {
-    width: 500px;
-  }
 }
 
 @media only screen and (min-width: 1280px) {
   .title {
     font-size: 30px;
-    font-weight: bolder;
   }
   .heading {
     font-size: 26px;
-    font-weight: bold;
-    inline-size: 350px;
   }
   .circle {
     width: 40px;
     height: 40px;
-    background-color: #EE672D;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-  }
-  img {
-    width: 500px;
   }
 }
 </style>

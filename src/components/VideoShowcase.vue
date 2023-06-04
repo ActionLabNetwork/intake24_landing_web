@@ -26,35 +26,18 @@
 
 iframe {
   box-shadow: 12px 12px 2px 1px #EE672D;
-  width: 300px;
-  height: 168px;
+  width: calc(90vw - 20%);
+  aspect-ratio: 16/9;
 }
 
 @media (min-width: 960px) {
-  iframe {
-    box-shadow: 12px 12px 2px 1px #EE672D;
-    width: 533px;
-    height: 300px;
-  }
-
   .subheading {
     font-size: 20px;
     inline-size: 500px;
-    overflow-wrap: break-word
   }
-}
 
-@media (min-width: 1280px) {
   iframe {
-    box-shadow: 12px 12px 2px 1px #EE672D;
-    width: 600px;
-    height: 337.5px;
-  }
-
-  .subheading {
-    font-size: 20px;
-    inline-size: 500px;
-    overflow-wrap: break-word
+    width: calc(70vw - 30%);
   }
 }
 </style>
