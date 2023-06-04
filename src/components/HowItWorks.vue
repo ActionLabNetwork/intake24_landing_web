@@ -15,7 +15,7 @@
       <v-col :order-md="isEven(index) ? 2 : 1">
         <div class="text-center">
           <figure>
-            <img width=400 :src="feature.image" alt="Product image" />
+            <img width=400 :src="feature.image" alt="Product image" loading="lazy" />
           </figure>
         </div>
       </v-col>

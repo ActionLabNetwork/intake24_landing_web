@@ -10,7 +10,7 @@
         </div>
         <div>
           <figure>
-            <img src="@/assets/cta-2-image.svg" alt="CTA Image" />
+            <img src="@/assets/cta-2-image.svg" alt="CTA Image" loading="lazy" />
           </figure>
         </div>
       </div>

@@ -6,7 +6,7 @@
         <div v-if="!mdAndUp"></div>
         <!-- Logo -->
         <div class="align-self-center">
-          <img src="@/assets/logo.png" alt="logo" class="logo" />
+          <img src="@/assets/logo.png" alt="logo" class="logo" loading="lazy" />
         </div>
         <!-- Navbar -->
         <nav v-if="mdAndUp">

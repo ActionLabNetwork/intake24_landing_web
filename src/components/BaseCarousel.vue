@@ -15,7 +15,7 @@
         <div class="carousel-bg d-flex justify-center align-center">
           <v-card flat class="card mx-auto mt-10 py-3 w-100 text-center">
             <figure>
-              <img :src="slide.image" alt="Testimonials" />
+              <img :src="slide.image" alt="Testimonials" loading="lazy" />
             </figure>
           </v-card>
         </div>

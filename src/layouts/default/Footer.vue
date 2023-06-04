@@ -4,7 +4,7 @@
       <v-col cols="12" md="4" offset-md="1">
         <!-- Logo -->
         <div class="d-flex align-items-center pa-5">
-          <img width=150 src="@/assets/logo-white.png" alt="Intake24 Logo" />
+          <img width=150 src="@/assets/logo-white.png" alt="Intake24 Logo" loading="lazy" />
         </div>
       </v-col>
       <v-col cols="12" md="5" offset-md="1" class="d-flex flex-column flex-lg-row">
