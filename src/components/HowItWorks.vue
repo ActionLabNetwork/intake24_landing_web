@@ -58,7 +58,7 @@ const features = [{
 <style scoped>
 .title {
   font-size: 26px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .heading {
   font-size: 18px;

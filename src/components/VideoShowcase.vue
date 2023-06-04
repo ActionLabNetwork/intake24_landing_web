@@ -15,7 +15,7 @@
 <style scoped>
 .heading {
   font-size: 26px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .subheading {

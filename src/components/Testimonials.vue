@@ -19,7 +19,7 @@ import BaseCarousel from '@/components/BaseCarousel.vue'
 <style scoped>
 .heading {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .spacer {

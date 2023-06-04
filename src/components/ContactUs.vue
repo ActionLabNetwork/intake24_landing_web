@@ -13,7 +13,7 @@
 <style scoped>
 .heading {
   font-size: 22px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .subheading {

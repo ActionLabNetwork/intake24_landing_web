@@ -20,7 +20,7 @@
 <style scoped>
 .subheading {
   inline-size: 60vw;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
 }
 

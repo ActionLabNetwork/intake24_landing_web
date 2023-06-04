@@ -34,7 +34,7 @@ import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue'
 <style scoped>
 .heading {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .spacer {
@@ -43,7 +43,7 @@ import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue'
 
 .subheading {
   inline-size: 75vw;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
 }
 
