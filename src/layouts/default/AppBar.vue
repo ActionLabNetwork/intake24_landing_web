@@ -25,9 +25,9 @@
         </nav>
         <!-- Hamburger button -->
         <div v-if="!mdAndUp">
-          <v-app-bar-nav-icon
-            @click.stop="drawer = !drawer"
-          />
+          <figure @click.stop="drawer = !drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+          </figure>
         </div>
       </div>
     </v-app-bar-title>

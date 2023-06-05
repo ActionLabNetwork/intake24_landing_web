@@ -8,14 +8,9 @@
     </v-row>
     <v-row>
       <iframe src="https://www.youtube.com/embed/iEt4MDngSkA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="mx-auto rounded-xl" allowfullscreen></iframe>
-      <lite-youtube videoid="iEt4MDngSkA"></lite-youtube>
     </v-row>
   </v-container>
 </template>
-
-<script setup lang=ts>
-import '@justinribeiro/lite-youtube';
-</script>
 
 <style scoped>
 .heading {

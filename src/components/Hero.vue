@@ -83,7 +83,7 @@
 
   .subheading {
     font-size: 20px;
-    width: 550px;
+    width: 40vw;
   }
 
   .hero-image {
@@ -135,6 +135,13 @@
   .cta-btn {
     height: 50px;
     font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .heading-decorator {
+    left: 25%;
+    transform: translateX(-9vw);
   }
 }
 </style>
