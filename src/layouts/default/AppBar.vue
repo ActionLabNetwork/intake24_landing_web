@@ -61,10 +61,6 @@ const drawer = ref(false);
 
 const mdAndUp = computed(() => display.mdAndUp.value)
 
-onMounted(() => {
-  console.log('Mobile: ', display.mdAndUp.value)
-})
-
 const navOptions = [
   { id: '1', name: 'About', link: '#about' },
   { id: '2', name: 'Features', link: '#features' },

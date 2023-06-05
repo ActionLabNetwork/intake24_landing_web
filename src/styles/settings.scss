@@ -5,7 +5,8 @@
  */
 
 @use "vuetify" with (
-  $body-font-family: "Rubik"
+  $body-font-family: "Rubik",
+  $color-pack: false,
 );
 
 // https://vuetifyjs.com/features/sass-variables/`

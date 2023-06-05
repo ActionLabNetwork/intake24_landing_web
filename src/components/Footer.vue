@@ -87,6 +87,10 @@ const navOptions = [{ id: '1', name: 'About' }, { id: '2', name: 'Features' }, {
   background-color: #E2622A;
 }
 
+.copyright p {
+  color: white;
+}
+
 .links {
   margin: 0
 }

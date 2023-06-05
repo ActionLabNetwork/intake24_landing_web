@@ -24,8 +24,8 @@
       </v-col>
       <!-- Hero Image -->
       <v-col cols="12" md="6" class="mx-md-auto">
-        <figure class="hero-image mx-auto">
-          <img src="@/assets/hero.svg" alt="Hero image" />
+        <figure class="mx-auto text-center">
+          <img class="hero-image" src="@/assets/hero.png" alt="Hero image" />
         </figure>
       </v-col>
     </v-row>
@@ -87,7 +87,7 @@
   }
 
   .hero-image {
-    width: 50%;
+    width: 80%;
   }
 
   .cta-btn {
@@ -129,7 +129,7 @@
   }
 
   .hero-image {
-    width: 90%;
+    width: 80%;
   }
 
   .cta-btn {

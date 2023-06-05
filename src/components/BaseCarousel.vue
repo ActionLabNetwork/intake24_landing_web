@@ -13,9 +13,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Testimonial1 from '@/assets/testimonial-1.svg'
-import Testimonial2 from '@/assets/testimonial-2.svg'
-import Testimonial3 from '@/assets/testimonial-3.svg'
+import Testimonial1 from '@/assets/testimonial-1.png'
+import Testimonial2 from '@/assets/testimonial-2.png'
+import Testimonial3 from '@/assets/testimonial-3.png'
 
 const carousel = ref<HTMLDivElement | null>(null)
 const activeIndex = ref(0)

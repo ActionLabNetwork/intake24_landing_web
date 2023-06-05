@@ -1,16 +1,16 @@
 <template>
   <v-container fluid>
     <v-row class="justify-center">
-      <div class="wrapper d-flex flex-column flex-md-row justify-space-between align-center bg-primary rounded-xl">
-        <div class="d-flex flex-column align-center">
-          <p class="heading mb-5">Why don't you give it a try and see if it fits your needs?</p>
+      <div class="wrapper d-flex flex-column flex-md-row justify-space-evenly align-center bg-primary rounded-xl">
+        <div class="d-flex flex-column align-center align-md-start">
+          <p class="heading mb-5 text-md-left">Why don't you give it a try and see if it fits your needs?</p>
           <v-btn class="btn rounded-pill text-primary mb-10" href="https://survey.intake24.dev/demo/generate-user" target="_blank">
             Try a demo
           </v-btn>
         </div>
         <div>
           <figure>
-            <img src="@/assets/cta-2-image.svg" alt="CTA Image" loading="lazy" />
+            <img src="@/assets/cta-2-image.png" alt="CTA Image" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -28,7 +28,7 @@
   font-size: 18px;
   text-align: center;
   font-weight: bold;
-  line-height: 1;
+  line-height: 2;
 }
 
 img {

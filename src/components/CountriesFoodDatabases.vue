@@ -11,7 +11,7 @@
     <v-row class="justify-center">
       <div class="text-center">
         <p class="subheading mx-auto mb-10">Localised food databases for different countries: United Kingdom, New Zealand, Australia, Portugal, Denmark and the United Arab Emirates, Japan*, Indonesia*, Malaysia*, and South Asia (*in development)</p>
-        <img src="@/assets/flags-image.svg" alt="Flags image" loading="lazy" />
+        <img src="@/assets/flags-image.png" alt="Flags image" loading="lazy" />
       </div>
     </v-row>
   </v-container>

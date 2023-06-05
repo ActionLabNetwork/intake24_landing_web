@@ -34,9 +34,9 @@
 </template>
 
 <script setup lang="ts">
-import Section1 from '@/assets/section-1.svg'
-import Section2 from '@/assets/section-2.svg'
-import Section3 from '@/assets/section-3.svg'
+import Section1 from '@/assets/section-1.png'
+import Section2 from '@/assets/section-2.png'
+import Section3 from '@/assets/section-3.png'
 import Section4 from '@/assets/section-4.svg'
 
 const isEven = (index: number) => index % 2 === 0

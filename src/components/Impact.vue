@@ -10,7 +10,7 @@
 
     <v-row class="justify-center text-center">
       <figure>
-        <img src="@/assets/intake-impacts-logos.svg" alt="Intake24's Impact Logo" loading="lazy"/>
+        <img src="@/assets/intake-impacts-logos.png" alt="Intake24's Impact Logo" loading="lazy"/>
       </figure>
     </v-row>
     <!-- Spacer -->
