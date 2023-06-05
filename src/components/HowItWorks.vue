@@ -13,9 +13,9 @@
         </div>
       </v-col>
       <v-col :order-sm="isEven(index) ? 2 : 1">
-        <div class="text-center">
+        <div>
           <figure>
-            <img :src="feature.image" alt="Product image" loading="lazy" />
+            <v-img class="v-img mx-auto" :src="feature.image" alt="Product image" />
           </figure>
         </div>
       </v-col>
@@ -60,11 +60,13 @@ const features = [{
   font-size: 26px;
   font-weight: bold;
 }
+
 .heading {
   font-size: 18px;
   font-weight: bold;
   inline-size: 350px;
 }
+
 .circle {
   width: 25px;
   height: 25px;
@@ -77,7 +79,8 @@ const features = [{
   font-weight: bold;
   color: white;
 }
-img {
+
+.v-img {
   width: 70%;
 }
 
@@ -85,11 +88,13 @@ img {
   .title {
     font-size: 30px;
   }
+
   .heading {
     font-size: 25px;
     font-weight: bold;
     inline-size: 350px;
   }
+
   .circle {
     width: 30px;
     height: 30px;
@@ -108,9 +113,11 @@ img {
   .title {
     font-size: 30px;
   }
+
   .heading {
     font-size: 26px;
   }
+
   .circle {
     width: 40px;
     height: 40px;

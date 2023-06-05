@@ -10,7 +10,7 @@
         </div>
         <div>
           <figure>
-            <img src="@/assets/cta-2-image.png" alt="CTA Image" loading="lazy" />
+            <v-img class="v-img" src="@/assets/cta-2-image.png" alt="CTA Image" />
           </figure>
         </div>
       </div>
@@ -31,7 +31,7 @@
   line-height: 2;
 }
 
-img {
+.v-img {
   width: 300px;
 }
 
@@ -46,7 +46,7 @@ img {
     line-height: 1;
   }
 
-  img {
+  .v-img {
     width: 400px;
   }
 
@@ -75,7 +75,7 @@ img {
     font-size: 30px;
   }
 
-  img {
+  .v-img {
     width: 500px;
   }
 }

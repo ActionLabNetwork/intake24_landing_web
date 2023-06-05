@@ -7,7 +7,7 @@
           <div class="text-wrapper">
             <div class="heading-container">
               <figure>
-                <img src="@/assets/heading-decorator.svg" alt="" width="20" class="heading-decorator" />
+                <v-img src="@/assets/heading-decorator.svg" alt="" class="heading-decorator" />
               </figure>
               <h1 class="heading">
                 Easy way to <br/> measure what <br /> people eat
@@ -25,7 +25,7 @@
       <!-- Hero Image -->
       <v-col cols="12" md="6" class="mx-md-auto">
         <figure class="mx-auto text-center">
-          <img class="hero-image" src="@/assets/hero.png" alt="Hero image" />
+          <v-img class="hero-image" src="@/assets/hero.png" alt="Hero image" />
         </figure>
       </v-col>
     </v-row>

@@ -5,9 +5,9 @@
         <!-- Dummy div for mobile view -->
         <div v-if="!mdAndUp"></div>
         <!-- Logo -->
-        <div class="align-self-center">
-          <img src="@/assets/logo.png" alt="logo" class="logo" loading="lazy" />
-        </div>
+        <figure class="align-self-center">
+          <v-img src="@/assets/logo.png" width="200" alt="logo" class="logo" loading="lazy" />
+        </figure>
         <!-- Navbar -->
         <nav v-if="mdAndUp">
           <v-list lines="one" class="d-flex flex-row align-center navbar">

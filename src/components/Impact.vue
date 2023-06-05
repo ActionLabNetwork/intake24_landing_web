@@ -8,9 +8,9 @@
       </article>
     </v-row>
 
-    <v-row class="justify-center text-center">
+    <v-row class="justify-center">
       <figure>
-        <img src="@/assets/intake-impacts-logos.png" alt="Intake24's Impact Logo" loading="lazy"/>
+        <v-img class="v-img mx-auto" src="@/assets/intake-impacts-logos.png" alt="Intake24's Impact Logo" />
       </figure>
     </v-row>
     <!-- Spacer -->
@@ -51,7 +51,7 @@ import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue'
   gap: 50px;
 }
 
-img {
+.v-img {
   width: 70%;
 }
 

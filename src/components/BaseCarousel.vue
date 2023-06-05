@@ -2,11 +2,11 @@
   <div>
     <div class="custom-carousel" ref="carousel">
       <div v-for="(slide, index) in slides" :key="slide.id" @click="scrollTo(index)" :id="`$slide-{slide.id}`">
-        <img :src="slide.image" alt="" loading="lazy" :class="{ blur: index !== activeIndex }" />
+        <v-img :src="slide.image" alt="Testimonial slide" :class="{ blur: index !== activeIndex }" class="v-img" />
       </div>
     </div>
     <div class="dots">
-      <button v-for="(slide, index) in slides" :key="slide.id" @click.prevent="scrollTo(index)" :class="{ active: index === activeIndex }"></button>
+      <button v-for="(slide, index) in slides" :key="slide.id" @click.prevent="scrollTo(index)" :class="{ active: index === activeIndex }" :aria-label="`Go to slide ${index + 1}`"></button>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ const slides = [{ id: 1, image: Testimonial1 }, { id: 2, image: Testimonial2 }, 
 const scrollTo = (index: number) => {
   if (!carousel.value) return
 
-  const item = carousel.value.children[index].querySelector('img');
+  const item = carousel.value.children[index].querySelector('.v-img');
   if (!item) return;
 
   item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -57,11 +57,11 @@ const scrollTo = (index: number) => {
   padding: 30px 0;
 }
 
-.custom-carousel div img {
+.custom-carousel div.v-img {
   width: 70vw;
 }
 
-.custom-carousel div img:hover {
+.custom-carousel div.v-img:hover {
   cursor: pointer;
 }
 
@@ -101,7 +101,7 @@ const scrollTo = (index: number) => {
     width: 65vw;
   }
 
-  .custom-carousel div img {
+  .custom-carousel div.v-img {
     width: 40vw;
   }
 }
@@ -111,11 +111,11 @@ const scrollTo = (index: number) => {
     width: 55vw;
   }
 
-  .custom-carousel div img.blur {
+  .custom-carousel div.v-img.blur {
     filter: blur(2px)
   }
 
-  .custom-carousel div img {
+  .custom-carousel div.v-img {
     width: 40vw;
   }
 }

@@ -23,9 +23,9 @@
       </v-col>
       <!-- Image -->
       <v-col :order-sm="isEven(index) ? 2 : 1">
-        <div class="text-center">
+        <div>
           <figure>
-            <img :src="getImg(index)" alt="Feature image" loading="lazy" />
+            <v-img class="v-img mx-auto" :src="getImg(index)" alt="Feature image" />
           </figure>
         </div>
       </v-col>
@@ -89,7 +89,7 @@ const getImg = (index: number) => {
   inline-size: 330px;
 }
 
-img {
+.v-img {
   width: 60%;
 }
 
