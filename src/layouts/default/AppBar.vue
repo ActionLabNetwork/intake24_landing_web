@@ -53,7 +53,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, computed } from 'vue';
+import { ref, computed } from 'vue';
 import { useDisplay } from 'vuetify/lib/framework.mjs';
 
 const display = useDisplay()

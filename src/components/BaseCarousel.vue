@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import Testimonial1 from '@/assets/testimonial-1.png'
 import Testimonial2 from '@/assets/testimonial-2.png'
 import Testimonial3 from '@/assets/testimonial-3.png'
@@ -31,6 +31,31 @@ const scrollTo = (index: number) => {
   item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
   activeIndex.value = index
 }
+
+let scrollHandler = () => { }
+
+onMounted(() => {
+  scrollHandler = () => {
+    if (!carousel.value) return
+    const scrollPos = carousel.value.scrollLeft
+    const itemWidth = carousel.value.clientWidth
+    const index = Math.round(scrollPos / itemWidth)
+
+    // Check if the scroll position is within 10% of the maximum scrollLeft value
+    const maxScrollLeft = carousel.value.scrollWidth - carousel.value.clientWidth
+    if (scrollPos >= maxScrollLeft * 0.9) {
+      activeIndex.value = slides.length - 1
+    } else {
+      activeIndex.value = index
+    }
+  }
+  carousel.value?.addEventListener('scroll', scrollHandler)
+})
+
+onUnmounted(() => {
+  carousel.value?.removeEventListener('scroll', scrollHandler)
+})
+
 </script>
 
 <style scoped>

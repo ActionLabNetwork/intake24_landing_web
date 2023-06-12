@@ -61,7 +61,7 @@ const features = [{
   id: 4,
   title: 'Built with brains',
   image: Section4,
-  description: ['Includes custom search algorithms, synonyms and metadata to help users find their food esaily', 'Provides prompts for foods commonly consumed together based on AI-powered personalised recommendations.', 'Automatically codes submitted records to national food composition databases'],
+  description: ['Includes custom search algorithms, synonyms and metadata to help users find their food easily', 'Provides prompts for foods commonly consumed together based on AI-powered personalised recommendations.', 'Automatically codes submitted records to national food composition databases'],
 }]
 
 const getImg = (index: number) => {
