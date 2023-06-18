@@ -3,7 +3,7 @@
     <v-row class="justify-center">
       <div class="d-flex flex-column align-center text-center mb-10">
         <p class="heading mb-3">Here's what participants <br/> say about Intake24</p>
-        <p class="subheading">Feedback from participants during field-testing in the Scottish Health Survey population (ages 11 to 89 years) of Intake24 in those aged 11+ years (up to and including older adults) showed the majority of people found the system user-friendly, enjoyable to use and felt it accurately captured their dietary intake.</p>
+        <p class="subheading">Feedback from participants during field-testing in the Scottish Health Survey population (ages 11 to 89 years) of Intake24 showed the majority of people found the system user-friendly, enjoyable to use and felt it accurately captured their dietary intake.</p>
       </div>
     </v-row>
     <v-row class="justify-center">

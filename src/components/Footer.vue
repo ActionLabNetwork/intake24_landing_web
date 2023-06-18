@@ -7,7 +7,7 @@
           <v-img :max-width="150" src="@/assets/logo-white.png" alt="Intake24 Logo" />
         </div>
       </v-col>
-      <v-col cols="12" md="5" offset-md="1" class="d-flex flex-column flex-lg-row">
+      <v-col cols="12" md="12" lg="6" class="d-flex flex-column flex-md-row justify-space-evenly">
         <!-- Links -->
         <div class="mr-md-5 mb-5">
           <v-list class="d-flex flex-column bg-primary links">
@@ -24,25 +24,19 @@
         <div class="mr-md-5 mb-5">
           <v-list density="compact" class="d-flex flex-column bg-primary">
             <v-list-item
-              title="Privacy Policy"
+              title="Localisation Toolkit"
             />
             <v-list-item
-              title="Terms & Conditions"
+              title="Science Behind"
+            />
+            <v-list-item
+              title="Publications"
             />
           </v-list>
         </div>
-        <!-- Social media icons -->
-        <div class="d-flex flex-column pt-md-5">
-          <p class="pl-4">Follow us on:</p>
-          <div class="pl-1">
-            <v-btn
-              v-for="icon in icons"
-              :key="icon"
-              :icon="icon"
-              variant="plain"
-              size="small"
-            ></v-btn>
-          </div>
+        <!-- Collaboration statement-->
+        <div class="d-flex flex-column pt-md-4 collaboration-stmt">
+          <p class="pl-4">Intake24 is maintained through a collaboration between Monash, Cambridge and Newcastle Universities.</p>
         </div>
       </v-col>
     </v-row>
@@ -97,5 +91,9 @@ const navOptions = [{ id: '1', name: 'About' }, { id: '2', name: 'Features' }, {
 
 .row {
   overflow-y: hidden;
+}
+
+.collaboration-stmt {
+  max-width: 250px;
 }
 </style>

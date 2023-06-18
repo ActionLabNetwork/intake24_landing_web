@@ -2,7 +2,7 @@
   <v-container fluid class="justify-center">
       <v-row class="justify-center">
         <article class="text-center">
-          <p class="heading mb-3">Interested to use Intake24?</p>
+          <p class="heading mb-3">Interested in using Intake24?</p>
           <p class="subheading mb-5">Get in touch with us to find out more.</p>
           <v-btn class="cta-btn text-primary rounded-pill">Contact Us</v-btn>
         </article>

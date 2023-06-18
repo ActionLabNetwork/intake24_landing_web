@@ -137,7 +137,7 @@ onUnmounted(() => {
   }
 
   .custom-carousel div.v-img.blur {
-    filter: blur(2px)
+    opacity: 0.5;
   }
 
   .custom-carousel div.v-img {
