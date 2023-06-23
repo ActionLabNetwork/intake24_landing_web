@@ -13,7 +13,7 @@
   </v-container>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import BaseCard from '@/components/BaseCard.vue'
 import TopicsIcon from '@/assets/topics-icon.svg'
 import PopulationIcon from '@/assets/population-icon.svg'

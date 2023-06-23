@@ -12,7 +12,7 @@
   </v-container>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import BaseCarousel from '@/components/BaseCarousel.vue'
 </script>
 

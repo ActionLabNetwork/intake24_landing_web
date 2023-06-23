@@ -9,7 +9,10 @@
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@mdi/font": "7.0.96",
+    "@kyvg/vue3-notification": "^2.9.1",
+    "@mdi/font": "^7.2.96",
+    "@vuelidate/validators": "^2.0.2",
+    "axios": "^1.4.0",
     "core-js": "^3.29.0",
     "pinia": "^2.0.0",
     "roboto-fontface": "*",

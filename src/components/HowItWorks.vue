@@ -23,7 +23,7 @@
   </v-container>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import Step1 from '@/assets/step-1.png'
 import Step2 from '@/assets/step-2.png'
 import Step3 from '@/assets/step-3.png'

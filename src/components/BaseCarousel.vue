@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import Testimonial1 from '@/assets/testimonial-1.png'
 import Testimonial2 from '@/assets/testimonial-2.png'

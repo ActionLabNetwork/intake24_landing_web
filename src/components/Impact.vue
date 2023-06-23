@@ -26,7 +26,7 @@
   </v-container>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import TopicsAndPopulations from '@/components/TopicsAndPopulations.vue'
 import CountriesFoodDatabases from '@/components/CountriesFoodDatabases.vue'
 </script>

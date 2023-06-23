@@ -33,7 +33,7 @@
   </v-container>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import Section1 from '@/assets/section-1.png'
 import Section2 from '@/assets/section-2.png'
 import Section3 from '@/assets/section-3.png'
