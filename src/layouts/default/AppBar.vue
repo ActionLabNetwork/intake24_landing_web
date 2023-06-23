@@ -22,6 +22,7 @@
               :key="option.id"
               :title="option.name"
               :href="option.link"
+              :class="{ 'active-nav-item': isActiveRoute(option.link) }"
             >
             </v-list-item>
             <v-btn
@@ -95,21 +96,27 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from "vue";
-import { useDisplay } from "vuetify/lib/framework.mjs";
+import { ref, computed } from 'vue'
+import { useDisplay } from 'vuetify/lib/framework.mjs'
+import { useRoute } from 'vue-router'
 
-const display = useDisplay();
-const drawer = ref(false);
+const route = useRoute()
+const display = useDisplay()
+const drawer = ref(false)
 
-const mdAndUp = computed(() => display.mdAndUp.value);
+const mdAndUp = computed(() => display.mdAndUp.value)
 
 const navOptions = [
-  { id: "1", name: "Home", link: "/" },
-  { id: "2", name: "About", link: "/about" },
-  { id: "3", name: "Science behind", link: "/science-behind" },
-  { id: "4", name: "Features", link: "/features" },
-  { id: "5", name: "Resources", link: "/resources" },
-];
+  { id: '1', name: 'Home', link: '/' },
+  { id: '2', name: 'About', link: '/about' },
+  { id: '3', name: 'Science behind', link: '/science-behind' },
+  { id: '4', name: 'Features', link: '/features' },
+  { id: '5', name: 'Resources', link: '/resources' },
+]
+
+const isActiveRoute = (routeToCheck: string) => {
+  return route.path === routeToCheck
+}
 </script>
 
 <style scoped>
@@ -120,6 +127,12 @@ nav.v-navigation-drawer.v-navigation-drawer--right.v-navigation-drawer--temporar
   width: 256px;
   z-index: 9999 !important;
 }
+
+.active-nav-item {
+  color: #ee672d;
+  font-weight: bold;
+}
+
 .wrapper {
   max-width: 1300px;
   margin: auto;
