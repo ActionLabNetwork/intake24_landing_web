@@ -31,12 +31,6 @@
 
 <script setup lang="ts">
 import {
-  DownloadingData1,
-  DownloadingData2,
-  DownloadingData3,
-} from '@/assets/resources/downloading-data'
-
-import {
   PivotTableSummaries1,
   PivotTableSummaries2,
   PivotTableSummaries3,
@@ -50,16 +44,6 @@ import {
   PivotTableSummaries11,
   PivotTableSummaries12,
 } from '@/assets/resources/pivot-table-summaries'
-
-import {
-  MissingFoods1,
-  MissingFoods2,
-  MissingFoods3,
-  MissingFoods4,
-  MissingFoods5,
-  MissingFoods6,
-  MissingFoods7,
-} from '@/assets/resources/missing-foods'
 
 const pivotTableSteps = [
   {
