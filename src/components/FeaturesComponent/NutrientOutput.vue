@@ -34,7 +34,13 @@
             height="82"
             width="260"
           >
-            Sample output (raw CSV)
+            <a
+              href="https://intake24.org/assets/output-samples/intake24_output_demo.csv"
+              target="_blank"
+              class="text-decoration-none text-primary"
+            >
+              Sample output (raw CSV)
+            </a>
           </v-btn>
           <v-btn
             class="feature_base_component_btn"
@@ -42,7 +48,13 @@
             height="82"
             width="260"
           >
-            Sample output (MS Excel)
+            <a
+              href="https://intake24.org/assets/output-samples/intake24_output_demo.xlsx"
+              target="_blank"
+              class="text-decoration-none text-primary"
+            >
+              Sample output (MS Excel)
+            </a>
           </v-btn>
         </div>
       </div>
