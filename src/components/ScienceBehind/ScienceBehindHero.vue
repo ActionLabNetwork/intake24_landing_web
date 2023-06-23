@@ -13,7 +13,7 @@
           class="rounded-pill text-primary pb-7 pt-3"
           href="/science-behind/publications"
         >
-          See publicatons about Intake24
+          See publications about Intake24
         </v-btn>
       </v-row>
     </div>
@@ -29,7 +29,7 @@
     </v-row>
     <v-row class="main-wrapper-2">
       <div class="">
-        <p class="heading-2">What is dietary recall?</p>
+        <p class="heading-2 pt-10">What is dietary recall?</p>
         <p class="subheading-2-main">
           A traditional dietary recall is a method of dietary assessment
           involving a face-to-face interview conducted by specifically trained
@@ -89,7 +89,7 @@
     </v-row>
     <v-row class="main-wrapper-2">
       <ol class="pl-10">
-        <li class="pt-3">
+        <li class="pt-0">
           Holmes B, Dick K, Nelson M. A comparison of four dietary assessment
           methods in materially deprived households in England. Public health
           nutrition. 2008 May;11(5):444-56.
@@ -263,7 +263,7 @@
         </p>
       </div>
       <ol class="pl-5">
-        <li class="pt-3">
+        <li class="pt-0">
           Preece J, Sharp H, Rogers Y. Interaction design: beyond human-computer
           interaction. John Wiley & Sons; 2015 May 26.
         </li>
@@ -289,7 +289,7 @@
     </v-row>
     <v-row class="main-wrapper-2">
       <div class="">
-        <p class="heading-2">Portion size images</p>
+        <p class="heading-2 pt-10">Portion size images</p>
         <p class="subheading-3-last mb-4">
           The food portion images were developed following the recommendations
           of Nelson and Haraldsdóttir1 and with input from Michael Nelson and
@@ -429,7 +429,6 @@
 
 <style scoped>
 .main-wrapper-2 ol {
-  padding-top: 49px;
   font-size: 14px;
   color: #ee672d;
 }
@@ -498,7 +497,6 @@
   font-weight: 600;
   padding-bottom: 32px;
   color: #060606;
-  padding-top: 90px;
 }
 .subheading-2-main-last {
   margin-bottom: 100px;
@@ -540,7 +538,7 @@
   padding-bottom: 40px;
 }
 .learn-main-image {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   margin-top: 40px;
 }
 .learn-main-image-2 {
@@ -578,7 +576,7 @@
     font-weight: bolder;
   }
   .learn-main-image {
-    margin-bottom: 74px;
+    margin-bottom: 50px;
     margin-top: 113px;
   }
   .main-wrapper-2 {
@@ -608,8 +606,7 @@
     color: #060606;
   }
   .learn-main-image {
-    margin-bottom: 74px;
-    margin-top: 113px;
+    margin-top: 50px;
   }
   .learn-main-image-2 {
     margin-bottom: 87px;
