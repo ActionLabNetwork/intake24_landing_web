@@ -33,19 +33,54 @@
       </div>
     </section>
 
-    <section class="resource_section1">
+    <section class="resource_section1 mb-10">
       <h1 class="text-center-resource">Localisation Toolkit</h1>
-      <div class="d-flex flex-column flex-md-row p-2">
-        <ResourceCard :arrayItem="arrayItemAt(6)" />
-        <ResourceCard :arrayItem="arrayItemAt(7)" />
-      </div>
-    </section>
-
-    <section class="resource_section2 mb-10 resource-pad">
-      <div class="d-flex flex-column flex-md-row p-2">
-        <ResourceCard :arrayItem="arrayItemAt(8)" />
-        <ResourceCard :arrayItem="arrayItemAt(9)" />
-      </div>
+      <p class="mb-5">
+        Based on our experience adapting Intake24 for different countries and
+        populations, we developed a set of protocols, templates and resources to
+        guide your localisation of Intake24. You can find these in the Intake24
+        online toolkit below.
+      </p>
+      <v-btn variant="outlined" class="cta-btn rounded-pill mb-5 text-primary">
+        Visit Intake24 Toolkit
+      </v-btn>
+      <p>Toolkit Quick Links:</p>
+      <v-row>
+        <v-col>
+          <ul class="list__no-bullets mt-5">
+            <li v-for="toolkit in toolkits.column1" :key="toolkit.id">
+              {{ toolkit.icon }}
+              <span class="text-decoration-underline">{{ toolkit.title }}</span>
+              <ul class="pl-8">
+                <li
+                  v-for="content in toolkit.content"
+                  :key="content.id"
+                  class="content-list"
+                >
+                  <a :href="content.link">{{ content.text }}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </v-col>
+        <v-col>
+          <ul class="list__no-bullets mt-5">
+            <li v-for="toolkit in toolkits.column2" :key="toolkit.id">
+              {{ toolkit.icon }}
+              <span class="text-decoration-underline">{{ toolkit.title }}</span>
+              <ul class="pl-8">
+                <li
+                  v-for="content in toolkit.content"
+                  :key="content.id"
+                  class="content-list"
+                >
+                  <a :href="content.link">{{ content.text }}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </v-col>
+      </v-row>
     </section>
 
     <footer class="footer">
@@ -65,8 +100,119 @@ import {
 } from '../assets/resources/index'
 
 import { ref } from 'vue'
+const toolkits = {
+  column1: [
+    {
+      id: 1,
+      icon: '🥝',
+      title: 'Translation',
+      content: [
+        { id: 1, text: 'Translation and Localisation', link: '' },
+        { id: 2, text: 'Additional Guidance', link: '' },
+      ],
+      link: '/toolkits/translation',
+    },
+    {
+      id: 2,
+      icon: '🍍',
+      title: 'Food list',
+      content: [
+        { id: 1, text: 'Guidance on creating food list', link: '' },
+        { id: 2, text: 'Food lists - quick start guide', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/food-list',
+    },
+    {
+      id: 3,
+      icon: '🍐',
+      title: 'Food composition data',
+      content: [
+        { id: 1, text: 'Food composition data - detailed guidance', link: '' },
+        { id: 2, text: 'Food composition data - Quick start guide', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/food-composition-data',
+    },
+    {
+      id: 4,
+      icon: '🥭',
+      title: 'Portion size',
+      content: [
+        { id: 1, text: 'Portion size guidance', link: '' },
+        { id: 2, text: 'Link to page', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/portion-size',
+    },
+    {
+      id: 5,
+      icon: '🍒',
+      title: 'Dietary feedback',
+      content: [
+        { id: 1, text: 'Link to page', link: '' },
+        { id: 2, text: 'Link to page', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/dietary-feedback',
+    },
+  ],
+  column2: [
+    {
+      id: 1,
+      icon: '🍅',
+      title: 'Editor Tool',
+      content: [
+        { id: 1, text: 'Link to page', link: '' },
+        { id: 2, text: 'Link to page', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/editor-tool',
+    },
+    {
+      id: 2,
+      icon: '🍇',
+      title: 'Demo video and FAQs',
+      content: [
+        { id: 1, text: 'Link to page', link: '' },
+        { id: 2, text: 'Link to page', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/demo-video-and-faqs',
+    },
+    {
+      id: 3,
+      icon: '🍉',
+      title: 'System testing',
+      content: [
+        { id: 1, text: 'Link to page', link: '' },
+        { id: 2, text: 'Link to page', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/system-testing',
+    },
+    { id: 4, icon: '🍋', title: 'Validation', link: '/toolkits/validation' },
+    {
+      id: 5,
+      icon: '🍊',
+      title: 'Installation',
+      link: '/toolkits/installation',
+    },
+    {
+      id: 6,
+      icon: '🍏',
+      title: 'Useful resources',
+      content: [
+        { id: 1, text: 'Link to page', link: '' },
+        { id: 2, text: 'Link to page', link: '' },
+        { id: 3, text: 'Link to page', link: '' },
+      ],
+      link: '/toolkits/useful-resources',
+    },
+  ],
+}
 
-const myArray = ref<object[]>([
+const myArray = ref([
   {
     title: 'GitHub repository',
     subText:
@@ -80,6 +226,7 @@ const myArray = ref<object[]>([
       'Library of portion size images used in Intake24. Downloadable and free to use.',
     imageSrc: Resource2,
     buttonVal: 'View',
+    link: 'https://drive.google.com/drive/folders/1LHVp4YnwCl0HKJyI5rikEztN2V4BnQCT',
   },
   {
     title: 'Emailing participants',
@@ -146,6 +293,16 @@ const arrayItemAt = (n: number) => myArray.value.at(n)
 </script>
 
 <style scoped>
+.list__no-bullets {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.content-list {
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+
 .resource-pad {
   padding-bottom: 200px;
 }

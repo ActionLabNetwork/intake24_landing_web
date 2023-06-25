@@ -7,7 +7,7 @@
         </p>
         <v-list lines="three">
           <v-list-item v-for="(step, idx) in steps" :key="step.text">
-            <p class="text">{{ idx }}) {{ step.text }}</p>
+            <p class="text">{{ idx + 1 }}) {{ step.text }}</p>
             <v-img v-if="step.img" :src="step.img" class="mt-5"></v-img>
           </v-list-item>
         </v-list>

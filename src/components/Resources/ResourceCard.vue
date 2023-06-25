@@ -5,7 +5,9 @@
       <h1 class="resource_text_box_heading">{{ arrayItem.title }}</h1>
       <p class="resource_text_box_text">{{ arrayItem.subText }}</p>
       <h3 class="resource_text_box_acition">
-        <a :href="props.arrayItem.link ?? '/emailing-research'">Read more</a>
+        <a :href="props.arrayItem.link ?? '/emailing-research'" target="_blank"
+          >Read more</a
+        >
       </h3>
     </v-container>
   </v-card>
