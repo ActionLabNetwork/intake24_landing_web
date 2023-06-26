@@ -263,8 +263,7 @@ const myArray = ref([
   },
   {
     title: 'Emailing participants',
-    subText:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
+    subText: 'Templates that can be used to email research participants.',
     imageSrc: Resource0,
     buttonVal: 'Read more',
   },
@@ -285,8 +284,7 @@ const myArray = ref([
   },
   {
     title: 'VLookup Template',
-    subText:
-      'Example VLookup table',
+    subText: 'Example VLookup table',
     imageSrc: Resource3,
     buttonVal: 'View template',
     link: 'https://docs.google.com/spreadsheets/d/1gTtwXI2GQjc_SdEfIOTwBODnJZF5w8_i/edit#gid=1943954977',
