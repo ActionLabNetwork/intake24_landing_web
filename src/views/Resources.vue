@@ -38,6 +38,12 @@
       </div>
     </section>
 
+    <section class="resource_section2">
+      <div class="d-flex flex-column flex-md-row p-2">
+        <ResourceCard :arrayItem="arrayItemAt(6)" />
+      </div>
+    </section>
+
     <section class="resource_section1 mb-10">
       <h1 class="text-center-resource">Localisation Toolkit</h1>
       <p class="mb-5">
@@ -110,6 +116,7 @@ import {
   Resource2,
   Resource3,
   Resource4,
+  GithubRepo,
 } from '../assets/resources/index'
 
 import { ref } from 'vue'
@@ -240,9 +247,10 @@ const myArray = ref([
   {
     title: 'GitHub repository',
     subText:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
-    imageSrc: Resource1,
+      'Link to Intake24 open-source GitHub repository, containing API server, deployments, feedback, etc.',
+    imageSrc: GithubRepo,
     buttonVal: 'View',
+    link: 'https://github.com/intake24',
   },
   {
     title: 'Portion Size Image Collection',
@@ -261,9 +269,8 @@ const myArray = ref([
   },
   {
     title: 'Downloading data',
-    subText:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
-    imageSrc: Resource2,
+    subText: 'Exporting your survey data in CSV format.',
+    imageSrc: Resource1,
     buttonVal: 'Read more',
     link: '/how-to-guides/downloading-data',
   },
@@ -271,14 +278,22 @@ const myArray = ref([
     title: 'Dealing with missing foods',
     subText:
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
-    imageSrc: Resource3,
+    imageSrc: Resource2,
     buttonVal: 'Read more',
     link: '/how-to-guides/missing-foods',
   },
   {
-    title: 'Summarising data using pivot',
+    title: 'VLookup Template',
     subText:
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
+    imageSrc: Resource3,
+    buttonVal: 'View template',
+    link: 'https://docs.google.com/spreadsheets/d/1gTtwXI2GQjc_SdEfIOTwBODnJZF5w8_i/edit#gid=1943954977',
+  },
+  {
+    title: 'Summarising data using pivot',
+    subText:
+      'Pivot tables can be used within Excel to calculate averages per person or per day.',
     imageSrc: Resource4,
     buttonVal: 'Read more',
     link: '/how-to-guides/pivot-table-summaries',

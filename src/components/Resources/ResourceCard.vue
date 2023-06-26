@@ -6,7 +6,7 @@
       <p class="resource_text_box_text">{{ arrayItem.subText }}</p>
       <h3 class="resource_text_box_acition">
         <a :href="props.arrayItem.link ?? '/emailing-research'" target="_blank"
-          >Read more</a
+          >{{ props.arrayItem.buttonVal }}</a
         >
       </h3>
     </v-container>
