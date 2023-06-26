@@ -14,11 +14,7 @@
           />
         </div>
       </v-col>
-      <v-col
-        cols="12"
-        md="12" lg="6"
-        class="d-flex flex-column flex-lg-row"
-      >
+      <v-col cols="12" md="12" lg="6" class="d-flex flex-column flex-lg-row">
         <!-- Links -->
         <div class="mr-md-5 mb-5">
           <v-list class="d-flex flex-column bg-primary links">
@@ -35,13 +31,15 @@
         <!-- Privacy and Terms & Conditions -->
         <div class="mr-md-5 mb-5">
           <v-list density="compact" class="d-flex flex-column bg-primary">
-            <v-list-item title="Localisation Toolkit" />
-            <a href="/science-behind">
+            <a :href="localisationToolkit">
+              <v-list-item title="Localisation Toolkit" />
+            </a>
+            <router-link to="/science-behind">
               <v-list-item title="Science Behind" />
-            </a>
-            <a href="/science-behind/publications">
+            </router-link>
+            <router-link to="/science-behind/publications">
               <v-list-item title="Publications" />
-            </a>
+            </router-link>
           </v-list>
         </div>
         <div class="d-flex flex-column pt-md-4">
@@ -72,18 +70,20 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import { useDisplay } from "vuetify/lib/framework.mjs";
+import { computed } from 'vue'
+import { useDisplay } from 'vuetify/lib/framework.mjs'
 
-const display = useDisplay();
-const mdAndUp = computed(() => display.mdAndUp.value);
+const localisationToolkit = import.meta.env.VITE_TOOLKIT_LINK
+
+const display = useDisplay()
+const mdAndUp = computed(() => display.mdAndUp.value)
 
 const navOptions = [
-  { id: "1", name: "About", link: "/about" },
-  { id: "2", name: "Features", link: "/features" },
-  { id: "3", name: "Resources", link: "/resources" },
-  { id: "4", name: "Contact Us", link: "/contact-us" },
-];
+  { id: '1', name: 'About', link: '/about' },
+  { id: '2', name: 'Features', link: '/features' },
+  { id: '3', name: 'Resources', link: '/resources' },
+  { id: '4', name: 'Contact Us', link: '/contact-us' },
+]
 </script>
 
 <style scoped>

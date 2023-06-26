@@ -112,6 +112,7 @@
 import Footer from '@/components/Footer.vue'
 import ResourceCard from '@/components/Resources/ResourceCard.vue'
 import {
+  Resource0,
   Resource1,
   Resource2,
   Resource3,
@@ -264,7 +265,7 @@ const myArray = ref([
     title: 'Emailing participants',
     subText:
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
-    imageSrc: Resource1,
+    imageSrc: Resource0,
     buttonVal: 'Read more',
   },
   {
@@ -277,7 +278,7 @@ const myArray = ref([
   {
     title: 'Dealing with missing foods',
     subText:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
+      'Dealing with recalls containing foods reported as missing from the system.',
     imageSrc: Resource2,
     buttonVal: 'Read more',
     link: '/how-to-guides/missing-foods',
@@ -285,7 +286,7 @@ const myArray = ref([
   {
     title: 'VLookup Template',
     subText:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.',
+      'Example VLookup table',
     imageSrc: Resource3,
     buttonVal: 'View template',
     link: 'https://docs.google.com/spreadsheets/d/1gTtwXI2GQjc_SdEfIOTwBODnJZF5w8_i/edit#gid=1943954977',

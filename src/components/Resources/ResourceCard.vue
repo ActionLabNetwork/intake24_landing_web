@@ -5,7 +5,9 @@
       <h1 class="resource_text_box_heading">{{ arrayItem.title }}</h1>
       <p class="resource_text_box_text">{{ arrayItem.subText }}</p>
       <h3 class="resource_text_box_acition">
-        <a :href="props.arrayItem.link ?? '/emailing-research'" target="_blank"
+        <a
+          :href="props.arrayItem.link ?? '/emailing-research'"
+          target="_blank"
           >{{ props.arrayItem.buttonVal }}</a
         >
       </h3>
@@ -36,6 +38,7 @@ const arrayItem = props.arrayItem
 .resource_card {
   border-radius: 10px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.03) !important;
+  min-width: 10rem;
 }
 .action_button {
   color: #000;
@@ -60,6 +63,9 @@ const arrayItem = props.arrayItem
 }
 
 @media (min-width: 960px) {
+  .resource_card {
+    min-width: 25rem;
+  }
   .action_button {
     color: #000;
   }
