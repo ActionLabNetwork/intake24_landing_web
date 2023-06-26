@@ -3,19 +3,36 @@
     <v-row>
       <p class="title mb-10 text-center mx-auto">Why use Intake24?</p>
     </v-row>
-    <v-row v-for="(feature, index) in features" :key="feature.id" class="d-flex flex-column flex-sm-row align-center mb-10">
+    <v-row
+      v-for="(feature, index) in features"
+      :key="feature.id"
+      class="d-flex flex-column flex-sm-row align-center mb-10"
+    >
       <!-- Description -->
       <v-col :order-sm="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
           <div class="d-flex flex-column text-center text-sm-start">
             <p class="heading mb-3">{{ feature.title }}</p>
-            <p v-if="typeof feature.description === 'string'" class="subheading">{{ feature.description }}</p>
+            <p
+              v-if="typeof feature.description === 'string'"
+              class="subheading"
+            >
+              {{ feature.description }}
+            </p>
             <ul v-else class="subheading text-left">
-              <li v-for="(item, itemIdx) in feature.description" :key="itemIdx">{{ item }}</li>
+              <li v-for="(item, itemIdx) in feature.description" :key="itemIdx">
+                {{ item }}
+              </li>
             </ul>
             <div>
-              <v-btn v-if="feature.cta" variant="outlined" class="cta-btn rounded-pill mt-5 text-primary">
-                {{ feature.cta }}
+              <v-btn
+                v-if="feature.cta"
+                variant="outlined"
+                class="cta-btn rounded-pill mt-5 text-primary"
+              >
+                <router-link :to="feature.cta.link" class="text-decoration-none text-primary">
+                  {{ feature.cta.text }}
+                </router-link>
               </v-btn>
             </div>
           </div>
@@ -25,7 +42,11 @@
       <v-col :order-sm="isEven(index) ? 2 : 1">
         <div>
           <figure>
-            <v-img class="v-img mx-auto" :src="getImg(index)" alt="Feature image" />
+            <v-img
+              class="v-img mx-auto"
+              :src="getImg(index)"
+              alt="Feature image"
+            />
           </figure>
         </div>
       </v-col>
@@ -41,28 +62,44 @@ import Section4 from '@/assets/section-4.svg'
 
 const isEven = (index: number) => index % 2 === 0
 
-const features = [{
-  id: 1,
-  title: 'As accurate as face-to-face recall',
-  image: Section1,
-  description: 'With comparable accuracy to a traditional face-to-face dietary recall interview, Intake24 offers a convenient, user-friendly, and low-cost alternative to collecting dietary data on a large scale.',
-  cta: 'Learn more'
-}, {
-  id: 2,
-  title: 'Online, convenient, and accessible',
-  image: Section2,
-  description: ['No need to travel for face-to-face visit', '15-20 minutes to complete with nutrient data available upon submission', 'Accessible on mobile phones, tablets or computer', 'WCAG 2.0 compliant (AA level)'],
-}, {
-  id: 3,
-  title: 'Estimation made easy',
-  image: Section3,
-  description: 'The tool includes validated food and drink photographs to estimate the amount of food or drink consumed',
-}, {
-  id: 4,
-  title: 'Built with brains',
-  image: Section4,
-  description: ['Includes custom search algorithms, synonyms and metadata to help users find their food easily', 'Provides prompts for foods commonly consumed together based on AI-powered personalised recommendations.', 'Automatically codes submitted records to national food composition databases'],
-}]
+const features = [
+  {
+    id: 1,
+    title: 'As accurate as face-to-face recall',
+    image: Section1,
+    description:
+      'With comparable accuracy to a traditional face-to-face dietary recall interview, Intake24 offers a convenient, user-friendly, and low-cost alternative to collecting dietary data on a large scale.',
+    cta: { text: 'Learn more', link: '/science-behind' },
+  },
+  {
+    id: 2,
+    title: 'Online, convenient, and accessible',
+    image: Section2,
+    description: [
+      'No need to travel for face-to-face visit',
+      '15-20 minutes to complete with nutrient data available upon submission',
+      'Accessible on mobile phones, tablets or computer',
+      'WCAG 2.0 compliant (AA level)',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Estimation made easy',
+    image: Section3,
+    description:
+      'The tool includes validated food and drink photographs to estimate the amount of food or drink consumed',
+  },
+  {
+    id: 4,
+    title: 'Built with brains',
+    image: Section4,
+    description: [
+      'Includes custom search algorithms, synonyms and metadata to help users find their food easily',
+      'Provides prompts for foods commonly consumed together based on AI-powered personalised recommendations.',
+      'Automatically codes submitted records to national food composition databases',
+    ],
+  },
+]
 
 const getImg = (index: number) => {
   return features[index].image

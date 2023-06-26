@@ -2,22 +2,41 @@
   <v-container fluid class="pt-md-15">
     <v-row no-gutters class="d-flex align-center">
       <!-- Text -->
-      <v-col cols="12" md="5" lg="4" offset="0" offset-md="1" class="mb-10 text-center text-md-left">
+      <v-col
+        cols="12"
+        md="5"
+        lg="4"
+        offset="0"
+        offset-md="1"
+        class="mb-10 text-center text-md-left"
+      >
         <div>
           <div class="text-wrapper">
             <div class="heading-container">
               <figure>
-                <v-img src="@/assets/heading-decorator.svg" alt="" class="heading-decorator" />
+                <v-img
+                  src="@/assets/heading-decorator.svg"
+                  alt=""
+                  class="heading-decorator"
+                />
               </figure>
               <h1 class="heading">
-                Easy way to <br/> measure what <br /> people eat
+                Easy way to <br />
+                measure what <br />
+                people eat
               </h1>
             </div>
             <h2 class="subheading">
-              Intake24 is an open-source self-completed computerised dietary recall system based on the multiple-pass 24-hour recall.
+              Intake24 is an open-source self-completed computerised dietary
+              recall system based on the multiple-pass 24-hour recall.
             </h2>
           </div>
-          <v-btn variant="outlined" class="cta-btn rounded-pill mt-5 bg-primary" href="https://survey.intake24.dev/demo/generate-user" target="_blank">
+          <v-btn
+            variant="outlined"
+            class="cta-btn rounded-pill mt-5 bg-primary"
+            :href="survey"
+            target="_blank"
+          >
             Try a Demo
           </v-btn>
         </div>
@@ -32,6 +51,9 @@
   </v-container>
 </template>
 
+<script setup lang="ts">
+const survey = import.meta.env.VITE_SURVEY
+</script>
 <style scoped>
 .heading-container {
   position: relative;

@@ -5,9 +5,14 @@
       <h2>Open source resources</h2>
       <p class="resource_section_para1">
         The Intake24 web application and API server source code is open source.
-        Sharing is under <a href=""><span>Apache license.</span></a> The UK food
-        database is available under the terms of the
-        <a href=""><span>Open Government Licence.</span></a>
+        Sharing is under
+        <a :href="apacheLicense" target="_blank">
+          <span>Apache license.</span></a
+        >
+        The UK food database is available under the terms of the
+        <a :href="openGovLicense" target="_blank">
+          <span>Open Government Licence.</span></a
+        >
       </p>
       <p class="resource_section_para2">
         Contact us for more information: <span>support@intake24.com.</span>
@@ -42,48 +47,56 @@
         online toolkit below.
       </p>
       <v-btn variant="outlined" class="cta-btn rounded-pill mb-5 text-primary">
-        Visit Intake24 Toolkit
+        <a
+          :href="toolkitLink"
+          class="text-decoration-none text-primary"
+          target="_blank"
+          >Visit Intake24 Toolkit</a
+        >
       </v-btn>
-      <p>Toolkit Quick Links:</p>
+      <p>Toolkit Quick Links</p>
       <v-row>
         <v-col>
-          <ul class="list__no-bullets mt-5">
-            <li v-for="toolkit in toolkits.column1" :key="toolkit.id">
+          <ul>
+            <li
+              v-for="toolkit in toolkits.column1"
+              :key="toolkit.id"
+              class="list__no-bullets mt-5"
+            >
               {{ toolkit.icon }}
-              <span class="text-decoration-underline">{{ toolkit.title }}</span>
+              <span>
+                <a :href="toolkit.link" target="_blank">{{ toolkit.title }}</a>
+              </span>
               <ul class="pl-8">
                 <li
                   v-for="content in toolkit.content"
                   :key="content.id"
                   class="content-list"
                 >
-                  <a :href="content.link">{{ content.text }}</a>
+                  <a :href="content.link" target="_blank">{{ content.text }}</a>
                 </li>
               </ul>
             </li>
           </ul>
         </v-col>
         <v-col>
-          <ul class="list__no-bullets mt-5">
-            <li v-for="toolkit in toolkits.column2" :key="toolkit.id">
+          <ul>
+            <li
+              v-for="toolkit in toolkits.column2"
+              :key="toolkit.id"
+              class="list__no-bullets mt-5"
+            >
               {{ toolkit.icon }}
-              <span class="text-decoration-underline">{{ toolkit.title }}</span>
-              <ul class="pl-8">
-                <li
-                  v-for="content in toolkit.content"
-                  :key="content.id"
-                  class="content-list"
-                >
-                  <a :href="content.link">{{ content.text }}</a>
-                </li>
-              </ul>
+              <span>
+                <a :href="toolkit.link" target="_blank">{{ toolkit.title }}</a>
+              </span>
             </li>
           </ul>
         </v-col>
       </v-row>
     </section>
 
-    <footer class="footer">
+    <footer class="footer mt-10">
       <Footer />
     </footer>
   </v-app>
@@ -100,6 +113,12 @@ import {
 } from '../assets/resources/index'
 
 import { ref } from 'vue'
+const env = import.meta.env
+
+const apacheLicense = env.VITE_APACHE_LICENSE
+const openGovLicense = env.VITE_OPEN_GOV_LICENSE
+
+const toolkitLink = ref(env.VITE_TOOLKIT_LINK)
 const toolkits = {
   column1: [
     {
@@ -107,54 +126,69 @@ const toolkits = {
       icon: '🥝',
       title: 'Translation',
       content: [
-        { id: 1, text: 'Translation and Localisation', link: '' },
-        { id: 2, text: 'Additional Guidance', link: '' },
+        {
+          id: 1,
+          text: 'Translation and Localisation',
+          link: env.VITE_TOOLKIT_TRANSLATION_AND_LOCALISATION,
+        },
+        {
+          id: 2,
+          text: 'Additional Guidance',
+          link: env.VITE_TOOLKIT_TRANSLATION_ADDITIONAL_GUIDANCE,
+        },
       ],
-      link: '/toolkits/translation',
+      link: env.VITE_TOOLKIT_TRANSLATION,
     },
     {
       id: 2,
       icon: '🍍',
       title: 'Food list',
       content: [
-        { id: 1, text: 'Guidance on creating food list', link: '' },
-        { id: 2, text: 'Food lists - quick start guide', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
+        {
+          id: 1,
+          text: 'Guidance on creating food list',
+          link: env.VITE_TOOLKIT_FOOD_LIST_DETAILED_GUIDANCE,
+        },
+        {
+          id: 2,
+          text: 'Food lists - quick start guide',
+          link: env.VITE_TOOLKIT_FOOD_LIST_QUICK_START_GUIDE,
+        },
       ],
-      link: '/toolkits/food-list',
+      link: env.VITE_TOOLKIT_FOOD_LIST,
     },
     {
       id: 3,
       icon: '🍐',
       title: 'Food composition data',
       content: [
-        { id: 1, text: 'Food composition data - detailed guidance', link: '' },
-        { id: 2, text: 'Food composition data - Quick start guide', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
+        {
+          id: 1,
+          text: 'Food composition data - detailed guidance',
+          link: env.VITE_TOOLKIT_FOOD_COMPOSITION_DATA_DETAILED_GUIDANCE,
+        },
       ],
-      link: '/toolkits/food-composition-data',
+      link: env.VITE_TOOLKIT_FOOD_COMPOSITION_DATA,
     },
     {
       id: 4,
       icon: '🥭',
       title: 'Portion size',
       content: [
-        { id: 1, text: 'Portion size guidance', link: '' },
-        { id: 2, text: 'Link to page', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
+        {
+          id: 1,
+          text: 'Portion size guidance',
+          link: env.VITE_TOOLKIT_PORTION_SIZE_GUIDANCE,
+        },
       ],
-      link: '/toolkits/portion-size',
+      link: env.VITE_TOOLKIT_PORTION_SIZE,
     },
     {
       id: 5,
       icon: '🍒',
       title: 'Dietary feedback',
-      content: [
-        { id: 1, text: 'Link to page', link: '' },
-        { id: 2, text: 'Link to page', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
-      ],
-      link: '/toolkits/dietary-feedback',
+      content: [],
+      link: env.VITE_TOOLKIT_DIETARY_FEEDBACK,
     },
   ],
   column2: [
@@ -162,52 +196,42 @@ const toolkits = {
       id: 1,
       icon: '🍅',
       title: 'Editor Tool',
-      content: [
-        { id: 1, text: 'Link to page', link: '' },
-        { id: 2, text: 'Link to page', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
-      ],
-      link: '/toolkits/editor-tool',
+      content: [],
+      link: env.VITE_TOOLKIT_EDITOR_TOOL,
     },
     {
       id: 2,
       icon: '🍇',
       title: 'Demo video and FAQs',
-      content: [
-        { id: 1, text: 'Link to page', link: '' },
-        { id: 2, text: 'Link to page', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
-      ],
-      link: '/toolkits/demo-video-and-faqs',
+      content: [],
+      link: env.VITE_TOOLKIT_DEMO_VIDEO_AND_FAQS,
     },
     {
       id: 3,
       icon: '🍉',
       title: 'System testing',
-      content: [
-        { id: 1, text: 'Link to page', link: '' },
-        { id: 2, text: 'Link to page', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
-      ],
-      link: '/toolkits/system-testing',
+      content: [],
+      link: env.VITE_TOOLKIT_SYSTEM_TESTING,
     },
-    { id: 4, icon: '🍋', title: 'Validation', link: '/toolkits/validation' },
+    {
+      id: 4,
+      icon: '🍋',
+      title: 'Validation',
+      link: env.VITE_TOOLKIT_VALIDATION,
+    },
     {
       id: 5,
       icon: '🍊',
       title: 'Installation',
-      link: '/toolkits/installation',
+      content: [],
+      link: env.VITE_TOOLKIT_INSTALLATION,
     },
     {
       id: 6,
       icon: '🍏',
       title: 'Useful resources',
-      content: [
-        { id: 1, text: 'Link to page', link: '' },
-        { id: 2, text: 'Link to page', link: '' },
-        { id: 3, text: 'Link to page', link: '' },
-      ],
-      link: '/toolkits/useful-resources',
+      content: [],
+      link: env.VITE_TOOLKIT_USEFUL_RESOURCES,
     },
   ],
 }
@@ -293,14 +317,21 @@ const arrayItemAt = (n: number) => myArray.value.at(n)
 </script>
 
 <style scoped>
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
 .list__no-bullets {
   list-style: none;
-  padding-bottom: 10px;
+  margin-top: 0.5rem;
 }
 
 .content-list {
   list-style-type: disc;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .resource-pad {

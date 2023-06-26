@@ -4,74 +4,102 @@
       <h1 class="heading mb-5 text-center">Get in touch</h1>
       <p class="sub-heading text-center mb-10">
         If you would like to use Intake24 in your research or are interested in
-        adapting the system for your country please get in touch.
+        adapting the system for your country please get in touch:
+        <a href="mailto:support@intake24.com">
+          support@intake24.com
+        </a>
       </p>
       <div>
         <v-form ref="form">
           <div class="first-name-text">
-            <v-text-field v-model="name" class="custom-text-field pl-2" placeholder="Name" variant="plain" hide-details="auto" dense required></v-text-field>
+            <v-text-field
+              v-model="name"
+              class="custom-text-field pl-2"
+              placeholder="Name"
+              variant="plain"
+              hide-details="auto"
+              dense
+              required
+            ></v-text-field>
           </div>
 
           <div class="first-name-text">
-            <v-text-field v-model="email" hide-details="auto" class="custom-text-field pl-2" variant="plain" placeholder="Email address" flat required></v-text-field>
-          </div>
-          <div class="first-name-text">
-            <v-text-field v-model="message" hide-details="auto" class="custom-text-field pl-2" variant="plain" placeholder="Message " flat required
+            <v-text-field
+              v-model="email"
+              hide-details="auto"
+              class="custom-text-field pl-2"
+              variant="plain"
+              placeholder="Email address"
+              flat
+              required
             ></v-text-field>
           </div>
-          <v-btn class="btn rounded-pill mb-10" @click="saveForm" v-if="loading == false">
+          <div class="first-name-text">
+            <v-text-field
+              v-model="message"
+              hide-details="auto"
+              class="custom-text-field pl-2"
+              variant="plain"
+              placeholder="Message "
+              flat
+              required
+            ></v-text-field>
+          </div>
+          <v-btn
+            class="btn rounded-pill mb-10"
+            @click="saveForm"
+            v-if="loading == false"
+          >
             Send
           </v-btn>
-          <v-btn class="btn rounded-pill mb-10" v-else>
-            Submitting...
-          </v-btn>
+          <v-btn class="btn rounded-pill mb-10" v-else> Submitting... </v-btn>
         </v-form>
       </div>
-      
     </div>
   </div>
 </template>
 <script lang="ts">
-import axios from 'axios';
+import axios from 'axios'
 export default {
   data() {
     return {
       loading: false,
-      name: "",
-      email: "",
-      message: "",
-    };
+      name: '',
+      email: '',
+      message: '',
+    }
   },
-  methods:{
+  methods: {
     async saveForm() {
-      if(this.name != '' && this.email != '' && this.message != ''){
-        this.loading = true;
+      if (this.name != '' && this.email != '' && this.message != '') {
+        this.loading = true
         try {
           let data = {
-            "name": this.name,
-            "email": this.email,
-            "message": this.message,
+            name: this.name,
+            email: this.email,
+            message: this.message,
           }
-          const response = await axios.post('https://intake24-website-backend.vercel.app/api/system/contact-us', data);
-          if(response.data.success == true){
-            this.loading = false;
-            this.$notify({ title: 'Contact Form Submitted', type: 'success' });
-            this.name= '';
-            this.email= '';
-            this.message= '';
+          const response = await axios.post(
+            'https://intake24-website-backend.vercel.app/api/system/contact-us',
+            data,
+          )
+          if (response.data.success == true) {
+            this.loading = false
+            this.$notify({ title: 'Contact Form Submitted', type: 'success' })
+            this.name = ''
+            this.email = ''
+            this.message = ''
           }
         } catch (error) {
-          this.loading = false;
-          this.$notify({ title: 'Something Went Wrong', type: 'error' });
+          this.loading = false
+          this.$notify({ title: 'Something Went Wrong', type: 'error' })
         }
+      } else {
+        this.$notify({ title: 'Please Insert All Fields', type: 'error' })
       }
-      else{
-        this.$notify({ title: 'Please Insert All Fields', type: 'error' });
-      }
-      
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -224,7 +252,6 @@ export default {
   }
 }
 @media only screen and (min-width: 960px) {
-
   .wrapper {
     width: 1300px;
   }
@@ -280,7 +307,5 @@ export default {
   .img-top {
     margin-top: 0px;
   }
-
 }
-
 </style>

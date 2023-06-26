@@ -44,7 +44,7 @@
             </a>
           </v-list>
         </div>
-        <div class="d-flex flex-column pt-md-5">
+        <div class="d-flex flex-column pt-md-4">
           <p class="pl-4">
             Intake24 is maintained through <br />
             a collaboration between<br />

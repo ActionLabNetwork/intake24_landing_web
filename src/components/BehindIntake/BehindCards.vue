@@ -1,5 +1,5 @@
 <template>
-   <v-card class="resource_card mb-10 mx-auto text-center">
+   <v-card class="resource_card mb-10 text-center">
     <v-img :src=arrayItem.imageSrc height="200"></v-img>
     <v-container class="resource_text_box" height="170">
         <a :href="arrayItem.link" target="_blank"><h1 class="resource_text_box_heading">{{ arrayItem.title }}</h1></a>

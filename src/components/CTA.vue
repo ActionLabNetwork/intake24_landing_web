@@ -1,22 +1,40 @@
 <template>
   <v-container fluid>
     <v-row class="justify-center">
-      <div class="wrapper d-flex flex-column flex-md-row justify-space-evenly align-center bg-primary rounded-xl">
+      <div
+        class="wrapper d-flex flex-column flex-md-row justify-space-evenly align-center bg-primary rounded-xl"
+      >
         <div class="d-flex flex-column align-center align-md-start">
-          <p class="heading mb-5 text-md-left">Why don't you give it a try and see if it fits your needs?</p>
-          <v-btn class="btn rounded-pill text-primary mb-10" href="https://survey.intake24.dev/demo/generate-user" target="_blank">
+          <p class="heading mb-5 text-md-left">
+            Why don't you give it a try and see if it fits your needs?
+          </p>
+          <v-btn
+            class="btn rounded-pill text-primary mb-10"
+            :href="survey"
+            target="_blank"
+          >
             Try a demo
           </v-btn>
         </div>
         <div>
           <figure>
-            <v-img class="v-img" src="@/assets/cta-2-image.png" alt="CTA Image" />
+            <v-img
+              class="v-img"
+              src="@/assets/cta-2-image.png"
+              alt="CTA Image"
+            />
           </figure>
         </div>
       </div>
     </v-row>
   </v-container>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const survey = ref(import.meta.env.VITE_SURVEY)
+</script>
 
 <style scoped>
 .wrapper {
