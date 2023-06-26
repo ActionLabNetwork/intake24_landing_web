@@ -124,6 +124,8 @@ import KirstyTrigg from '@/assets/about/behind-intake/kirsty-trigg.png'
 import AngelaMulligan from '@/assets/about/behind-intake/angela-mulligan.png'
 import CaireenRoberts from '@/assets/about/behind-intake/caireen-roberts.png'
 import AnilaFarooq from '@/assets/about/behind-intake/anila-farooq.png'
+import HeidiNg from '@/assets/about/behind-intake/heidi-ng.png'
+import TimurOsadchiy from '@/assets/about/behind-intake/timur-osadchiy.png'
 
 const technicalnewcastle = ref<object[]>([
   {
@@ -171,7 +173,7 @@ const Nutrition = ref([
   {
     title: 'Heidi Ng',
     subText: 'Research fellow, Nutrition, dietetics and food',
-    imageSrc: NoPortrait,
+    imageSrc: HeidiNg,
     link: 'https://research.monash.edu/en/persons/heidi-ng',
   },
 ])
@@ -198,7 +200,7 @@ const technical0 = ref([
   {
     title: 'Dr Timur Osadchiy',
     subText: 'Software developer',
-    imageSrc: NoPortrait,
+    imageSrc: TimurOsadchiy,
     link: '',
   },
 ])
