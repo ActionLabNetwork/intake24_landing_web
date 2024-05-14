@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <section class="pa-0">
+      <CountryBanner />
       <Hero />
     </section>
     <section id="about">
@@ -40,6 +41,7 @@ import Impact from '@/components/Impact.vue'
 import Testimonials from '@/components/Testimonials.vue';
 import CTA from '@/components/CTA.vue';
 import Footer from '@/components/Footer.vue';
+import CountryBanner from '@/components/CountryBanner.vue';
 </script>
 
 <style scoped>

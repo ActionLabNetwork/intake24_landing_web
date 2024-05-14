@@ -18,7 +18,8 @@
       "vuetify"
     ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@/store/*": ["src/store/*"],
     },
   },
   "include": [
