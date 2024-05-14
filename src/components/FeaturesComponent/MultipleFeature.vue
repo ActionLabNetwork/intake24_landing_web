@@ -82,10 +82,10 @@
     
     @media only screen and (min-width: 960px) {
 
-        .img-1 {
-            width: auto;
-            margin: auto;
-        } 
+    .img-1 {
+        width: 400px;
+        margin: auto;
+    } 
     .subheading-text {
       font-size: 20px;
       line-height: 30px;
