@@ -8,44 +8,38 @@
         lg="4"
         offset="0"
         offset-md="1"
-        class="mb-10 text-center text-md-left"
+        class="mb-10 text-center text-md-start"
       >
-        <div>
-          <div class="text-wrapper">
-            <div class="heading-container">
-              <figure>
-                <v-img
-                  src="@/assets/heading-decorator.svg"
-                  alt=""
-                  class="heading-decorator"
-                />
-              </figure>
-              <h1 class="heading">
-                Easy way to <br />
-                measure what <br />
-                people eat
-              </h1>
-            </div>
-            <h2 class="subheading">
-              Intake24 is an open-source self-completed computerised dietary
-              recall system based on the multiple-pass 24-hour recall.
-            </h2>
+        <div class="text-wrapper">
+          <div class="heading-container">
+            <v-img
+              src="@/assets/heading-decorator.svg"
+              alt=""
+              class="heading-decorator"
+            />
+            <h1 class="heading">
+              Easy way to <br />
+              measure what <br />
+              people eat
+            </h1>
           </div>
-          <v-btn
-            variant="outlined"
-            class="cta-btn rounded-pill mt-5 bg-primary"
-            :href="survey"
-            target="_blank"
-          >
-            Try a Demo
-          </v-btn>
+          <h2 class="subheading">
+            Intake24 is an open-source self-completed computerised dietary
+            recall system based on the multiple-pass 24-hour recall.
+          </h2>
         </div>
+        <v-btn
+          variant="outlined"
+          class="cta-btn rounded-pill mt-5 bg-primary"
+          :href="survey"
+          target="_blank"
+        >
+          Try a Demo
+        </v-btn>
       </v-col>
       <!-- Hero Image -->
       <v-col cols="12" md="6" class="mx-md-auto">
-        <figure class="mx-auto text-center">
           <v-img class="hero-image" src="@/assets/hero.png" alt="Hero image" />
-        </figure>
       </v-col>
     </v-row>
   </v-container>
@@ -54,6 +48,7 @@
 <script setup lang="ts">
 const survey = import.meta.env.VITE_SURVEY
 </script>
+
 <style scoped>
 .heading-container {
   position: relative;
@@ -74,7 +69,7 @@ const survey = import.meta.env.VITE_SURVEY
 }
 
 .heading {
-  font-size: 32px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: bold;
   line-height: 1;
 }
@@ -88,10 +83,10 @@ const survey = import.meta.env.VITE_SURVEY
 }
 
 .subheading {
-  font-size: 14px;
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
   font-weight: 500;
   margin: 0 auto;
-  width: 300px;
+  width: min(300px, 40vw);
 }
 
 @media only screen and (min-width: 600px) {

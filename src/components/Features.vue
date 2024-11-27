@@ -11,7 +11,7 @@
       <!-- Description -->
       <v-col :order-sm="isEven(index) ? 1 : 2">
         <div class="d-flex flex-column align-center">
-          <div class="d-flex flex-column text-center text-sm-start">
+          <div class="text-center text-sm-start">
             <p class="heading mb-3">{{ feature.title }}</p>
             <p
               v-if="typeof feature.description === 'string'"

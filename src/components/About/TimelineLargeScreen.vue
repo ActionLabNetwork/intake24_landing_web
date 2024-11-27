@@ -92,7 +92,7 @@
           <template v-slot:opposite>
             <span class="text-year"> 2020</span>
           </template>
-          <div>
+          <div class="right-align-left-side">
             <v-expansion-panels>
               <v-expansion-panel>
                 <v-expansion-panel-title
@@ -263,7 +263,7 @@
           <template v-slot:opposite>
             <span class="text-year">2018</span>
           </template>
-          <div>
+          <div class='right-align-left-side'>
             <v-expansion-panels>
               <v-expansion-panel>
                 <v-expansion-panel-title
@@ -444,7 +444,7 @@
           <template v-slot:opposite>
             <span class="text-year">2015</span>
           </template>
-          <div>
+          <div class='right-align-left-side'>
             <v-expansion-panels>
               <v-expansion-panel>
                 <v-expansion-panel-title
@@ -617,7 +617,7 @@
           <template v-slot:opposite>
             <span class="text-year"> 2012</span>
           </template>
-          <div>
+          <div class="right-align-left-side">
             <v-expansion-panels>
               <v-expansion-panel>
                 <v-expansion-panel-title
@@ -793,7 +793,7 @@
           <template v-slot:opposite>
             <span class="text-year">2007</span>
           </template>
-          <div>
+          <div class='right-align-left-side'>
             <v-expansion-panels>
               <v-expansion-panel>
                 <v-expansion-panel-title
@@ -985,44 +985,44 @@ export default {
       accordionOpen8: false,
       accordionOpen9: false,
       accordionOpen10: false,
-    };
+    }
   },
   methods: {
     toggleAccordion() {
-      this.accordionOpen = !this.accordionOpen;
+      this.accordionOpen = !this.accordionOpen
     },
     toggleAccordion1() {
-      this.accordionOpen1 = !this.accordionOpen1;
+      this.accordionOpen1 = !this.accordionOpen1
     },
     toggleAccordion2() {
-      this.accordionOpen2 = !this.accordionOpen2;
+      this.accordionOpen2 = !this.accordionOpen2
     },
     toggleAccordion3() {
-      this.accordionOpen3 = !this.accordionOpen3;
+      this.accordionOpen3 = !this.accordionOpen3
     },
     toggleAccordion4() {
-      this.accordionOpen4 = !this.accordionOpen4;
+      this.accordionOpen4 = !this.accordionOpen4
     },
     toggleAccordion5() {
-      this.accordionOpen5 = !this.accordionOpen5;
+      this.accordionOpen5 = !this.accordionOpen5
     },
     toggleAccordion6() {
-      this.accordionOpen6 = !this.accordionOpen6;
+      this.accordionOpen6 = !this.accordionOpen6
     },
     toggleAccordion7() {
-      this.accordionOpen7 = !this.accordionOpen7;
+      this.accordionOpen7 = !this.accordionOpen7
     },
     toggleAccordion8() {
-      this.accordionOpen8 = !this.accordionOpen8;
+      this.accordionOpen8 = !this.accordionOpen8
     },
     toggleAccordion9() {
-      this.accordionOpen9 = !this.accordionOpen9;
+      this.accordionOpen9 = !this.accordionOpen9
     },
     toggleAccordion10() {
-      this.accordionOpen10 = !this.accordionOpen10;
+      this.accordionOpen10 = !this.accordionOpen10
     },
   },
-};
+}
 </script>
 
 <style>
@@ -1106,7 +1106,7 @@ export default {
 .time-line-class
   .v-expansion-panel-title--active
   > .v-expansion-panel-title__overlay,
-.v-expansion-panel-title[aria-haspopup="menu"][aria-expanded="true"]
+.v-expansion-panel-title[aria-haspopup='menu'][aria-expanded='true']
   > .v-expansion-panel-title__overlay {
   opacity: 0 !important;
 }
@@ -1140,7 +1140,7 @@ export default {
 .time-line-class
   .expentioniright
   .v-timeline-divider__dot.v-timeline-divider__dot--size-default:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 26px;
   background-color: #ee672d;
@@ -1155,7 +1155,7 @@ export default {
 .time-line-class
   .expentionleft
   .v-timeline-divider__dot.v-timeline-divider__dot--size-default:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 26px;
   background-color: #ee672d;
@@ -1447,5 +1447,12 @@ export default {
   .time-line-class .img-top {
     margin-top: 0px;
   }
+}
+
+.right-align-left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-items: end;
 }
 </style>
