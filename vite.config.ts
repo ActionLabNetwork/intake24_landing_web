@@ -50,6 +50,9 @@ export default defineConfig({
     }),
     viteCompression(),
   ],
+  build: {
+    assetsDir: "webassets",
+  },
   define: { "process.env": {} },
   resolve: {
     alias: {

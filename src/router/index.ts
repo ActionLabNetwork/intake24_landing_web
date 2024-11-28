@@ -22,6 +22,11 @@ const routes = [
         component: () => import('@/views/BehindIntake.vue'),
       },
       {
+        path: '/about/finished-survey',
+        name: 'FinishedSurvey',
+        component: () => import('@/views/FinishedSurvey.vue'),
+      },
+      {
         path: '/resources',
         name: 'Resources',
         component: () => import('@/views/Resources.vue'),

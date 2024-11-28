@@ -1,19 +1,14 @@
 <template>
   <div class="d-flex flex-column align-center">
     <div class="form-wrapper">
-      <h1 class="heading mb-5 text-center">Get in touch</h1>
+      <h1 class="heading mb-5 text-center">Thank you for your participation in the survey</h1>
       <p class="sub-heading text-center mb-10">
-        If you would like to use Intake24 in your research or are interested in
-        adapting the system for your country please get in touch:
-        <a href="mailto:support@intake24.com">
-          support@intake24.com
-        </a>
+        Your food and drinks intake information has been recorded. Thank you for your participation!
       </p>
     </div>
   </div>
 </template>
 <script lang="ts">
-import axios from 'axios'
 export default {
   data() {
     return {
@@ -24,34 +19,6 @@ export default {
     }
   },
   methods: {
-    async saveForm() {
-      if (this.name != '' && this.email != '' && this.message != '') {
-        this.loading = true
-        try {
-          let data = {
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          }
-          const response = await axios.post(
-            'https://intake24-website-backend.vercel.app/api/system/contact-us',
-            data,
-          )
-          if (response.data.success == true) {
-            this.loading = false
-            this.$notify({ title: 'Contact Form Submitted', type: 'success' })
-            this.name = ''
-            this.email = ''
-            this.message = ''
-          }
-        } catch (error) {
-          this.loading = false
-          this.$notify({ title: 'Something Went Wrong', type: 'error' })
-        }
-      } else {
-        this.$notify({ title: 'Please Insert All Fields', type: 'error' })
-      }
-    },
   },
 }
 </script>
