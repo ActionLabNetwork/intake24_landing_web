@@ -45,6 +45,7 @@
     "vite": "^6.0.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-vue-devtools": "^7.6.5",
     "vite-plugin-vuetify": "^2.0.4",
     "vue-tsc": "^2.1.10"
   }

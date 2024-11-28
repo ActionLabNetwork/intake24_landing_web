@@ -9,7 +9,7 @@
     <section class="wrapper-auto technical-team-padding">
       <h1 class="Heading">Technical team</h1>
       <div class="SECOND-wrapper d-flex flex-column flex-md-row">
-        <template v-for="(item, index) in technicalnewcastle">
+        <template v-for="(item, index) in technicalNewcastle">
           <BehindCards :arrayItem="item" />
         </template>
       </div>
@@ -106,15 +106,15 @@ import ContactUsCard from '@/components/ContactUs/ContactUsCard.vue'
 
 // Image Imports
 import NoPortrait from '@/assets/about/behind-intake/no-portrait.png'
-import IvanPoliakov from '@/assets/about/behind-intake/ivan-poliakov.png'
+import IvanPoliakov from '@/assets/about/behind-intake/ivan-poliakov.jpg'
 import PatrickOlivier from '@/assets/about/behind-intake/patrick-olivier.png'
 import DinislamAbdulgalimov from '@/assets/about/behind-intake/dinislam-abdulgalimov.png'
 import JoshuaSeguin from '@/assets/about/behind-intake/joshua-seguin.png'
-import EmmaFoster from '@/assets/about/behind-intake/emma-foster.png'
+import EmmaFoster from '@/assets/about/behind-intake/emma-foster.jpg'
 import TracyMcCaffery from '@/assets/about/behind-intake/tracy-mccaffery.png'
 import DanJackson from '@/assets/about/behind-intake/dan-jackson.png'
-import AshleyAdamson from '@/assets/about/behind-intake/ashley-adamson.png'
-import JenBradley from '@/assets/about/behind-intake/jen-bradley.png'
+import AshleyAdamson from '@/assets/about/behind-intake/ashley-adamson.jpg'
+import JenBradley from '@/assets/about/behind-intake/jen-bradley.jpg'
 import LukasHroch from '@/assets/about/behind-intake/lukas-hroch.png'
 import PollyPage from '@/assets/about/behind-intake/polly-page.png'
 import ToniSteer from '@/assets/about/behind-intake/toni-steer.png'
@@ -126,8 +126,18 @@ import CaireenRoberts from '@/assets/about/behind-intake/caireen-roberts.png'
 import AnilaFarooq from '@/assets/about/behind-intake/anila-farooq.png'
 import HeidiNg from '@/assets/about/behind-intake/heidi-ng.png'
 import TimurOsadchiy from '@/assets/about/behind-intake/timur-osadchiy.png'
+import EmmaSimpson from '@/assets/about/behind-intake/emma-simpson.jpeg'
+import MaisieRowland from '@/assets/about/behind-intake/maisie-rowland.jpeg'
+import SuzannaAbraham from '@/assets/about/behind-intake/suzanna-abraham.jpg'
 
-const technicalnewcastle = ref<object[]>([
+type Person = {
+  title: string
+  subText: string
+  imageSrc: string
+  link: string
+}
+
+const technicalNewcastle = ref<Person[]>([
   {
     title: 'Dr Ivan Poliakov',
     subText: 'Lead Developer, Intake24',
@@ -227,13 +237,13 @@ const Nutrition0 = ref([
   {
     title: 'Dr Emma Simpson',
     subText: 'Research nutritionist',
-    imageSrc: NoPortrait,
+    imageSrc: EmmaSimpson,
     link: '',
   },
   {
     title: 'Ms Maisie Rowland',
     subText: 'Research nutritionist',
-    imageSrc: NoPortrait,
+    imageSrc: MaisieRowland,
     link: 'https://www.ncl.ac.uk/medical-sciences/people/profile/maisierowland.html',
   },
 ])
@@ -250,7 +260,7 @@ const technical1 = ref<object[]>([
     subText: 'Software Developer',
     imageSrc: NoPortrait,
     link: 'https://www.mrc-epid.cam.ac.uk/people/jamie-sun/',
-  }
+  },
 ])
 
 const Nutrition1 = ref<object[]>([
@@ -287,7 +297,7 @@ const Nutrition1 = ref<object[]>([
   {
     title: 'Suzanna Abraham',
     subText: 'Research assistant, Nutrition measurement platform',
-    imageSrc: NoPortrait,
+    imageSrc: SuzannaAbraham,
     link: 'https://www.mrc-epid.cam.ac.uk/people/suzanna-abraham/',
   },
   {
