@@ -5,56 +5,10 @@
       <p class="sub-heading text-center mb-10">
         If you would like to use Intake24 in your research or are interested in
         adapting the system for your country please get in touch:
-        <a :href="'mailto:' + supportEmail">
-          {{ supportEmail }}
+        <a href="mailto:support@intake24.com">
+          support@intake24.com
         </a>
       </p>
-      <div>
-        <v-form ref="form">
-          <div class="first-name-text">
-            <v-text-field
-              v-model="name"
-              class="custom-text-field pl-2"
-              placeholder="Name"
-              variant="plain"
-              hide-details="auto"
-              dense
-              required
-            ></v-text-field>
-          </div>
-
-          <div class="first-name-text">
-            <v-text-field
-              v-model="email"
-              hide-details="auto"
-              class="custom-text-field pl-2"
-              variant="plain"
-              placeholder="Email address"
-              flat
-              required
-            ></v-text-field>
-          </div>
-          <div class="first-name-text">
-            <v-text-field
-              v-model="message"
-              hide-details="auto"
-              class="custom-text-field pl-2"
-              variant="plain"
-              placeholder="Message "
-              flat
-              required
-            ></v-text-field>
-          </div>
-          <v-btn
-            class="btn rounded-pill mb-10"
-            @click="saveForm"
-            v-if="loading == false"
-          >
-            Send
-          </v-btn>
-          <v-btn class="btn rounded-pill mb-10" v-else> Submitting... </v-btn>
-        </v-form>
-      </div>
     </div>
   </div>
 </template>
@@ -67,7 +21,6 @@ export default {
       name: '',
       email: '',
       message: '',
-      supportEmail: import.meta.env.VITE_SUPPORT_EMAIL,
     }
   },
   methods: {
